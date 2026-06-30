@@ -114,4 +114,13 @@ class InitiateWithdrawalRequestTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "source_account"
+     */
+    public function testPropertySourceAccount()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

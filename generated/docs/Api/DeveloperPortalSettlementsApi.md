@@ -11,7 +11,7 @@ All URIs are relative to https://api.mizancore.ng, except if the operation defin
 ## `developerStatementsDownload()`
 
 ```php
-developerStatementsDownload($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerStatementsDownload($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response
 ```
 
 Download settlement statement (CSV)
@@ -36,9 +36,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalSettlementsApi(
@@ -65,7 +65,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response**](../Model/WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ try {
 ## `developerStatementsIndex()`
 
 ```php
-developerStatementsIndex($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerStatementsIndex($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\DeveloperStatementsIndex200Response
 ```
 
 Get settlement statement
@@ -108,9 +108,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalSettlementsApi(
@@ -137,7 +137,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperStatementsIndex200Response**](../Model/DeveloperStatementsIndex200Response.md)
 
 ### Authorization
 

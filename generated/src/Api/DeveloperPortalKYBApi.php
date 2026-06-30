@@ -151,7 +151,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerKybBusiness($x_tenant_id, $update_kyb_business_request, string $contentType = self::contentTypes['developerKybBusiness'][0])
     {
@@ -170,7 +170,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerKybBusinessWithHttpInfo($x_tenant_id, $update_kyb_business_request, string $contentType = self::contentTypes['developerKybBusiness'][0])
     {
@@ -201,11 +201,11 @@ class DeveloperPortalKYBApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -223,7 +223,7 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -269,7 +269,7 @@ class DeveloperPortalKYBApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -302,7 +302,7 @@ class DeveloperPortalKYBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -356,7 +356,7 @@ class DeveloperPortalKYBApi
      */
     public function developerKybBusinessAsyncWithHttpInfo($x_tenant_id, $update_kyb_business_request, string $contentType = self::contentTypes['developerKybBusiness'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response';
         $request = $this->developerKybBusinessRequest($x_tenant_id, $update_kyb_business_request, $contentType);
 
         return $this->client
@@ -493,9 +493,9 @@ class DeveloperPortalKYBApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -530,7 +530,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerKybDocumentsUpload($x_tenant_id, $upload_kyb_document_request, string $contentType = self::contentTypes['developerKybDocumentsUpload'][0])
     {
@@ -549,7 +549,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerKybDocumentsUploadWithHttpInfo($x_tenant_id, $upload_kyb_document_request, string $contentType = self::contentTypes['developerKybDocumentsUpload'][0])
     {
@@ -580,11 +580,11 @@ class DeveloperPortalKYBApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -602,16 +602,16 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -629,7 +629,7 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -675,7 +675,7 @@ class DeveloperPortalKYBApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -708,7 +708,7 @@ class DeveloperPortalKYBApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -716,7 +716,7 @@ class DeveloperPortalKYBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -770,7 +770,7 @@ class DeveloperPortalKYBApi
      */
     public function developerKybDocumentsUploadAsyncWithHttpInfo($x_tenant_id, $upload_kyb_document_request, string $contentType = self::contentTypes['developerKybDocumentsUpload'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->developerKybDocumentsUploadRequest($x_tenant_id, $upload_kyb_document_request, $contentType);
 
         return $this->client
@@ -907,9 +907,9 @@ class DeveloperPortalKYBApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -944,7 +944,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response|\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerKybOfficersAdd($x_tenant_id, $add_kyb_officer_request, string $contentType = self::contentTypes['developerKybOfficersAdd'][0])
     {
@@ -963,7 +963,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response|\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerKybOfficersAddWithHttpInfo($x_tenant_id, $add_kyb_officer_request, string $contentType = self::contentTypes['developerKybOfficersAdd'][0])
     {
@@ -994,11 +994,11 @@ class DeveloperPortalKYBApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1016,16 +1016,16 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1043,7 +1043,7 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1089,7 +1089,7 @@ class DeveloperPortalKYBApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1122,7 +1122,7 @@ class DeveloperPortalKYBApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1130,7 +1130,7 @@ class DeveloperPortalKYBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1184,7 +1184,7 @@ class DeveloperPortalKYBApi
      */
     public function developerKybOfficersAddAsyncWithHttpInfo($x_tenant_id, $add_kyb_officer_request, string $contentType = self::contentTypes['developerKybOfficersAdd'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response';
         $request = $this->developerKybOfficersAddRequest($x_tenant_id, $add_kyb_officer_request, $contentType);
 
         return $this->client
@@ -1321,9 +1321,9 @@ class DeveloperPortalKYBApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1358,7 +1358,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerKybOfficersRemove($id, $x_tenant_id, string $contentType = self::contentTypes['developerKybOfficersRemove'][0])
     {
@@ -1377,7 +1377,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerKybOfficersRemoveWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerKybOfficersRemove'][0])
     {
@@ -1408,11 +1408,11 @@ class DeveloperPortalKYBApi
 
             switch($statusCode) {
                 case 204:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1430,16 +1430,16 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1457,7 +1457,7 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1503,7 +1503,7 @@ class DeveloperPortalKYBApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1536,7 +1536,7 @@ class DeveloperPortalKYBApi
                 case 204:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1544,7 +1544,7 @@ class DeveloperPortalKYBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1598,7 +1598,7 @@ class DeveloperPortalKYBApi
      */
     public function developerKybOfficersRemoveAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerKybOfficersRemove'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->developerKybOfficersRemoveRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -1736,9 +1736,9 @@ class DeveloperPortalKYBApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1774,7 +1774,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerKybOfficersUpdate($id, $x_tenant_id, $update_kyb_officer_request, string $contentType = self::contentTypes['developerKybOfficersUpdate'][0])
     {
@@ -1794,7 +1794,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerKybOfficersUpdateWithHttpInfo($id, $x_tenant_id, $update_kyb_officer_request, string $contentType = self::contentTypes['developerKybOfficersUpdate'][0])
     {
@@ -1825,11 +1825,11 @@ class DeveloperPortalKYBApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1847,7 +1847,7 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1893,7 +1893,7 @@ class DeveloperPortalKYBApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1926,7 +1926,7 @@ class DeveloperPortalKYBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1982,7 +1982,7 @@ class DeveloperPortalKYBApi
      */
     public function developerKybOfficersUpdateAsyncWithHttpInfo($id, $x_tenant_id, $update_kyb_officer_request, string $contentType = self::contentTypes['developerKybOfficersUpdate'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response';
         $request = $this->developerKybOfficersUpdateRequest($id, $x_tenant_id, $update_kyb_officer_request, $contentType);
 
         return $this->client
@@ -2135,9 +2135,9 @@ class DeveloperPortalKYBApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -2171,7 +2171,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerKybShow($x_tenant_id, string $contentType = self::contentTypes['developerKybShow'][0])
     {
@@ -2189,7 +2189,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerKybShowWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['developerKybShow'][0])
     {
@@ -2220,11 +2220,11 @@ class DeveloperPortalKYBApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2242,7 +2242,7 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2288,7 +2288,7 @@ class DeveloperPortalKYBApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2321,7 +2321,7 @@ class DeveloperPortalKYBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2373,7 +2373,7 @@ class DeveloperPortalKYBApi
      */
     public function developerKybShowAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['developerKybShow'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response';
         $request = $this->developerKybShowRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -2495,9 +2495,9 @@ class DeveloperPortalKYBApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -2531,7 +2531,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response|\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerKybSubmit($x_tenant_id, string $contentType = self::contentTypes['developerKybSubmit'][0])
     {
@@ -2549,7 +2549,7 @@ class DeveloperPortalKYBApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response|\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerKybSubmitWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['developerKybSubmit'][0])
     {
@@ -2580,11 +2580,11 @@ class DeveloperPortalKYBApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2602,16 +2602,16 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2629,7 +2629,7 @@ class DeveloperPortalKYBApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2675,7 +2675,7 @@ class DeveloperPortalKYBApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2708,7 +2708,7 @@ class DeveloperPortalKYBApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2716,7 +2716,7 @@ class DeveloperPortalKYBApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2768,7 +2768,7 @@ class DeveloperPortalKYBApi
      */
     public function developerKybSubmitAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['developerKybSubmit'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response';
         $request = $this->developerKybSubmitRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -2890,9 +2890,9 @@ class DeveloperPortalKYBApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];

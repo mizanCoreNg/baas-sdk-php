@@ -138,7 +138,7 @@ class DeveloperPortalUsageAnalyticsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function usageAnalyticsBreakdown($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsBreakdown'][0])
     {
@@ -156,7 +156,7 @@ class DeveloperPortalUsageAnalyticsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usageAnalyticsBreakdownWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsBreakdown'][0])
     {
@@ -187,11 +187,11 @@ class DeveloperPortalUsageAnalyticsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -209,7 +209,7 @@ class DeveloperPortalUsageAnalyticsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -255,7 +255,7 @@ class DeveloperPortalUsageAnalyticsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -288,7 +288,7 @@ class DeveloperPortalUsageAnalyticsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -340,7 +340,7 @@ class DeveloperPortalUsageAnalyticsApi
      */
     public function usageAnalyticsBreakdownAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsBreakdown'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response';
         $request = $this->usageAnalyticsBreakdownRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -462,9 +462,9 @@ class DeveloperPortalUsageAnalyticsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -498,7 +498,7 @@ class DeveloperPortalUsageAnalyticsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\UsageAnalyticsRateLimitStatus200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function usageAnalyticsRateLimitStatus($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsRateLimitStatus'][0])
     {
@@ -516,7 +516,7 @@ class DeveloperPortalUsageAnalyticsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\UsageAnalyticsRateLimitStatus200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usageAnalyticsRateLimitStatusWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsRateLimitStatus'][0])
     {
@@ -547,11 +547,11 @@ class DeveloperPortalUsageAnalyticsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsRateLimitStatus200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsRateLimitStatus200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -569,7 +569,7 @@ class DeveloperPortalUsageAnalyticsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsRateLimitStatus200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -615,7 +615,7 @@ class DeveloperPortalUsageAnalyticsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsRateLimitStatus200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -648,7 +648,7 @@ class DeveloperPortalUsageAnalyticsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsRateLimitStatus200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -700,7 +700,7 @@ class DeveloperPortalUsageAnalyticsApi
      */
     public function usageAnalyticsRateLimitStatusAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsRateLimitStatus'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsRateLimitStatus200Response';
         $request = $this->usageAnalyticsRateLimitStatusRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -822,9 +822,9 @@ class DeveloperPortalUsageAnalyticsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -858,7 +858,7 @@ class DeveloperPortalUsageAnalyticsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function usageAnalyticsSummary($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsSummary'][0])
     {
@@ -876,7 +876,7 @@ class DeveloperPortalUsageAnalyticsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usageAnalyticsSummaryWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsSummary'][0])
     {
@@ -907,11 +907,11 @@ class DeveloperPortalUsageAnalyticsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -929,7 +929,7 @@ class DeveloperPortalUsageAnalyticsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -975,7 +975,7 @@ class DeveloperPortalUsageAnalyticsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1008,7 +1008,7 @@ class DeveloperPortalUsageAnalyticsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1060,7 +1060,7 @@ class DeveloperPortalUsageAnalyticsApi
      */
     public function usageAnalyticsSummaryAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['usageAnalyticsSummary'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\UsageAnalyticsSummary200Response';
         $request = $this->usageAnalyticsSummaryRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -1182,9 +1182,9 @@ class DeveloperPortalUsageAnalyticsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];

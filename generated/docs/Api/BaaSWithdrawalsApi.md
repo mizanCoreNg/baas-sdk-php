@@ -15,7 +15,7 @@ All URIs are relative to https://api.mizancore.ng, except if the operation defin
 ## `baasWithdrawalIndex()`
 
 ```php
-baasWithdrawalIndex($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+baasWithdrawalIndex($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response
 ```
 
 List withdrawal transactions
@@ -40,9 +40,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSWithdrawalsApi(
@@ -69,7 +69,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response**](../Model/PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ try {
 ## `baasWithdrawalShow()`
 
 ```php
-baasWithdrawalShow($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+baasWithdrawalShow($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response
 ```
 
 Get withdrawal details
@@ -112,9 +112,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSWithdrawalsApi(
@@ -143,7 +143,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response**](../Model/PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -161,12 +161,12 @@ try {
 ## `baasWithdrawalStore()`
 
 ```php
-baasWithdrawalStore($x_tenant_id, $idempotency_key, $initiate_withdrawal_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+baasWithdrawalStore($x_tenant_id, $idempotency_key, $initiate_withdrawal_request): \MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response
 ```
 
 Initiate a withdrawal
 
-Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
 ### Example
 
@@ -186,9 +186,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSWithdrawalsApi(
@@ -219,7 +219,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response**](../Model/PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -237,7 +237,7 @@ try {
 ## `developerWithdrawalsIndex()`
 
 ```php
-developerWithdrawalsIndex($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerWithdrawalsIndex($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response
 ```
 
 List withdrawal transactions
@@ -262,9 +262,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSWithdrawalsApi(
@@ -291,7 +291,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response**](../Model/PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ try {
 ## `developerWithdrawalsShow()`
 
 ```php
-developerWithdrawalsShow($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerWithdrawalsShow($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response
 ```
 
 Get withdrawal details
@@ -334,9 +334,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSWithdrawalsApi(
@@ -365,7 +365,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response**](../Model/PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -383,12 +383,12 @@ try {
 ## `developerWithdrawalsStore()`
 
 ```php
-developerWithdrawalsStore($x_tenant_id, $idempotency_key, $initiate_withdrawal_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerWithdrawalsStore($x_tenant_id, $idempotency_key, $initiate_withdrawal_request): \MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response
 ```
 
 Initiate a withdrawal
 
-Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
 ### Example
 
@@ -408,9 +408,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSWithdrawalsApi(
@@ -421,7 +421,7 @@ $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSWithdrawalsApi(
 );
 $x_tenant_id = world.test.localhost; // string | Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts.
 $idempotency_key = 'idempotency_key_example'; // string | Unique client-generated key (UUID recommended) for idempotent retry semantics. Duplicate requests return the cached response with header Idempotency-Replayed: true.
-$initiate_withdrawal_request = {"amount":150050,"destination_account":"example","destination_bank":"example","narration":"example"}; // \MizanCore\BaasSdk\Generated\Model\InitiateWithdrawalRequest
+$initiate_withdrawal_request = {"amount":150050,"destination_account":"example","destination_bank":"example","narration":"example","source_account":"example"}; // \MizanCore\BaasSdk\Generated\Model\InitiateWithdrawalRequest
 
 try {
     $result = $apiInstance->developerWithdrawalsStore($x_tenant_id, $idempotency_key, $initiate_withdrawal_request);
@@ -441,7 +441,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\PartnerTransactionIndex200Response**](../Model/PartnerTransactionIndex200Response.md)
 
 ### Authorization
 

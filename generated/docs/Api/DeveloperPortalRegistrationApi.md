@@ -11,7 +11,7 @@ All URIs are relative to https://api.mizancore.ng, except if the operation defin
 ## `developerRegistrationRegister()`
 
 ```php
-developerRegistrationRegister($x_tenant_id, $register_developer_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerRegistrationRegister($x_tenant_id, $register_developer_request): \MizanCore\BaasSdk\Generated\Model\DeveloperRegistrationRegister201Response
 ```
 
 Register as a developer partner
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperRegistrationRegister201Response**](../Model/DeveloperRegistrationRegister201Response.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `developerRegistrationVerifyEmail()`
 
 ```php
-developerRegistrationVerifyEmail($x_tenant_id, $verify_developer_email_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerRegistrationVerifyEmail($x_tenant_id, $verify_developer_email_request): \MizanCore\BaasSdk\Generated\Model\DeveloperRegistrationRegister201Response
 ```
 
 Verify developer email address
@@ -109,7 +109,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperRegistrationRegister201Response**](../Model/DeveloperRegistrationRegister201Response.md)
 
 ### Authorization
 

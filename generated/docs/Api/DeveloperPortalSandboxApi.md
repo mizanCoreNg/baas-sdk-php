@@ -12,7 +12,7 @@ All URIs are relative to https://api.mizancore.ng, except if the operation defin
 ## `developerSandboxReset()`
 
 ```php
-developerSandboxReset($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerSandboxReset($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\DeveloperSandboxStatus200Response
 ```
 
 Reset sandbox environment
@@ -37,9 +37,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalSandboxApi(
@@ -66,7 +66,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperSandboxStatus200Response**](../Model/DeveloperSandboxStatus200Response.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ try {
 ## `developerSandboxStatus()`
 
 ```php
-developerSandboxStatus($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerSandboxStatus($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\DeveloperSandboxStatus200Response
 ```
 
 Get sandbox environment status
@@ -109,9 +109,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalSandboxApi(
@@ -138,7 +138,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperSandboxStatus200Response**](../Model/DeveloperSandboxStatus200Response.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ try {
 ## `developerSandboxTestData()`
 
 ```php
-developerSandboxTestData($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerSandboxTestData($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\DeveloperSandboxTestData200Response
 ```
 
 Get sandbox test data patterns
@@ -181,9 +181,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalSandboxApi(
@@ -210,7 +210,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperSandboxTestData200Response**](../Model/DeveloperSandboxTestData200Response.md)
 
 ### Authorization
 

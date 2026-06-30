@@ -267,6 +267,7 @@ class CreateApiKeyRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     public const SCOPES_CARDS_WRITE = 'cards:write';
     public const SCOPES_CONSENT_READ = 'consent:read';
     public const SCOPES_CONSENT_WRITE = 'consent:write';
+    public const SCOPES_FEES_READ = 'fees:read';
     public const ENVIRONMENT_TEST = 'test';
     public const ENVIRONMENT_LIVE = 'live';
 
@@ -293,6 +294,7 @@ class CreateApiKeyRequest implements ModelInterface, ArrayAccess, \JsonSerializa
             self::SCOPES_CARDS_WRITE,
             self::SCOPES_CONSENT_READ,
             self::SCOPES_CONSENT_WRITE,
+            self::SCOPES_FEES_READ,
         ];
     }
 

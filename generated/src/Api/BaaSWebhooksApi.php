@@ -178,7 +178,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerWebhooksDeliveries($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksDeliveries'][0])
     {
@@ -197,7 +197,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerWebhooksDeliveriesWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksDeliveries'][0])
     {
@@ -228,11 +228,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -250,7 +250,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -296,7 +296,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -329,7 +329,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -383,7 +383,7 @@ class BaaSWebhooksApi
      */
     public function developerWebhooksDeliveriesAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksDeliveries'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response';
         $request = $this->developerWebhooksDeliveriesRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -524,9 +524,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -561,7 +561,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerWebhooksDestroy($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksDestroy'][0])
     {
@@ -580,7 +580,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerWebhooksDestroyWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksDestroy'][0])
     {
@@ -611,11 +611,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 204:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -633,16 +633,16 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -660,7 +660,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -706,7 +706,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -739,7 +739,7 @@ class BaaSWebhooksApi
                 case 204:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -747,7 +747,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -801,7 +801,7 @@ class BaaSWebhooksApi
      */
     public function developerWebhooksDestroyAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksDestroy'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->developerWebhooksDestroyRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -942,9 +942,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -978,7 +978,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerWebhooksIndex($x_tenant_id, string $contentType = self::contentTypes['developerWebhooksIndex'][0])
     {
@@ -996,7 +996,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerWebhooksIndexWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['developerWebhooksIndex'][0])
     {
@@ -1027,11 +1027,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1049,7 +1049,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1095,7 +1095,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1128,7 +1128,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1180,7 +1180,7 @@ class BaaSWebhooksApi
      */
     public function developerWebhooksIndexAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['developerWebhooksIndex'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
         $request = $this->developerWebhooksIndexRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -1302,9 +1302,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1339,7 +1339,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerWebhooksRotateSecret($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksRotateSecret'][0])
     {
@@ -1358,7 +1358,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerWebhooksRotateSecretWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksRotateSecret'][0])
     {
@@ -1389,11 +1389,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1411,16 +1411,16 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1438,7 +1438,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1511,7 +1511,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1544,7 +1544,7 @@ class BaaSWebhooksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1552,7 +1552,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1614,7 +1614,7 @@ class BaaSWebhooksApi
      */
     public function developerWebhooksRotateSecretAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksRotateSecret'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->developerWebhooksRotateSecretRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -1755,9 +1755,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1792,7 +1792,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerWebhooksShow($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksShow'][0])
     {
@@ -1811,7 +1811,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerWebhooksShowWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksShow'][0])
     {
@@ -1842,11 +1842,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1864,7 +1864,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1910,7 +1910,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1943,7 +1943,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1997,7 +1997,7 @@ class BaaSWebhooksApi
      */
     public function developerWebhooksShowAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksShow'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
         $request = $this->developerWebhooksShowRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -2138,9 +2138,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -2175,7 +2175,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerWebhooksStore($x_tenant_id, $store_webhook_subscription_request, string $contentType = self::contentTypes['developerWebhooksStore'][0])
     {
@@ -2194,7 +2194,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerWebhooksStoreWithHttpInfo($x_tenant_id, $store_webhook_subscription_request, string $contentType = self::contentTypes['developerWebhooksStore'][0])
     {
@@ -2225,11 +2225,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2247,16 +2247,16 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2274,7 +2274,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2320,7 +2320,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2353,7 +2353,7 @@ class BaaSWebhooksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2361,7 +2361,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2415,7 +2415,7 @@ class BaaSWebhooksApi
      */
     public function developerWebhooksStoreAsyncWithHttpInfo($x_tenant_id, $store_webhook_subscription_request, string $contentType = self::contentTypes['developerWebhooksStore'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
         $request = $this->developerWebhooksStoreRequest($x_tenant_id, $store_webhook_subscription_request, $contentType);
 
         return $this->client
@@ -2552,9 +2552,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -2589,7 +2589,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerWebhooksTest($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksTest'][0])
     {
@@ -2608,7 +2608,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerWebhooksTestWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksTest'][0])
     {
@@ -2639,11 +2639,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2661,16 +2661,16 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2688,7 +2688,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2734,7 +2734,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2767,7 +2767,7 @@ class BaaSWebhooksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2775,7 +2775,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2829,7 +2829,7 @@ class BaaSWebhooksApi
      */
     public function developerWebhooksTestAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerWebhooksTest'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->developerWebhooksTestRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -2970,9 +2970,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -3008,7 +3008,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerWebhooksUpdate($id, $x_tenant_id, $update_webhook_subscription_request, string $contentType = self::contentTypes['developerWebhooksUpdate'][0])
     {
@@ -3028,7 +3028,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerWebhooksUpdateWithHttpInfo($id, $x_tenant_id, $update_webhook_subscription_request, string $contentType = self::contentTypes['developerWebhooksUpdate'][0])
     {
@@ -3059,11 +3059,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3081,7 +3081,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3127,7 +3127,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3160,7 +3160,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3216,7 +3216,7 @@ class BaaSWebhooksApi
      */
     public function developerWebhooksUpdateAsyncWithHttpInfo($id, $x_tenant_id, $update_webhook_subscription_request, string $contentType = self::contentTypes['developerWebhooksUpdate'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
         $request = $this->developerWebhooksUpdateRequest($id, $x_tenant_id, $update_webhook_subscription_request, $contentType);
 
         return $this->client
@@ -3372,9 +3372,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -3409,7 +3409,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookSubscriptionDestroy($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionDestroy'][0])
     {
@@ -3428,7 +3428,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookSubscriptionDestroyWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionDestroy'][0])
     {
@@ -3459,11 +3459,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 204:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3481,16 +3481,16 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3508,7 +3508,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3554,7 +3554,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3587,7 +3587,7 @@ class BaaSWebhooksApi
                 case 204:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3595,7 +3595,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3649,7 +3649,7 @@ class BaaSWebhooksApi
      */
     public function webhookSubscriptionDestroyAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionDestroy'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->webhookSubscriptionDestroyRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -3787,9 +3787,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -3823,7 +3823,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookSubscriptionIndex($x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionIndex'][0])
     {
@@ -3841,7 +3841,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookSubscriptionIndexWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionIndex'][0])
     {
@@ -3872,11 +3872,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3894,7 +3894,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3940,7 +3940,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3973,7 +3973,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4025,7 +4025,7 @@ class BaaSWebhooksApi
      */
     public function webhookSubscriptionIndexAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionIndex'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
         $request = $this->webhookSubscriptionIndexRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -4147,9 +4147,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -4184,7 +4184,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookSubscriptionOperationsDeliveries($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsDeliveries'][0])
     {
@@ -4203,7 +4203,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookSubscriptionOperationsDeliveriesWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsDeliveries'][0])
     {
@@ -4234,11 +4234,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4256,7 +4256,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4302,7 +4302,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4335,7 +4335,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4389,7 +4389,7 @@ class BaaSWebhooksApi
      */
     public function webhookSubscriptionOperationsDeliveriesAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsDeliveries'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionOperationsDeliveries200Response';
         $request = $this->webhookSubscriptionOperationsDeliveriesRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -4527,9 +4527,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -4564,7 +4564,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookSubscriptionOperationsRotateSecret($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsRotateSecret'][0])
     {
@@ -4583,7 +4583,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookSubscriptionOperationsRotateSecretWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsRotateSecret'][0])
     {
@@ -4614,11 +4614,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4636,16 +4636,16 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4663,7 +4663,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4736,7 +4736,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4769,7 +4769,7 @@ class BaaSWebhooksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4777,7 +4777,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4839,7 +4839,7 @@ class BaaSWebhooksApi
      */
     public function webhookSubscriptionOperationsRotateSecretAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsRotateSecret'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->webhookSubscriptionOperationsRotateSecretRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -4977,9 +4977,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -5014,7 +5014,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookSubscriptionOperationsTest($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsTest'][0])
     {
@@ -5033,7 +5033,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookSubscriptionOperationsTestWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsTest'][0])
     {
@@ -5064,11 +5064,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5086,16 +5086,16 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5113,7 +5113,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5159,7 +5159,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5192,7 +5192,7 @@ class BaaSWebhooksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5200,7 +5200,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5254,7 +5254,7 @@ class BaaSWebhooksApi
      */
     public function webhookSubscriptionOperationsTestAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionOperationsTest'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->webhookSubscriptionOperationsTestRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -5392,9 +5392,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -5429,7 +5429,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookSubscriptionShow($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionShow'][0])
     {
@@ -5448,7 +5448,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookSubscriptionShowWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionShow'][0])
     {
@@ -5479,11 +5479,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5501,7 +5501,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5547,7 +5547,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5580,7 +5580,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5634,7 +5634,7 @@ class BaaSWebhooksApi
      */
     public function webhookSubscriptionShowAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookSubscriptionShow'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
         $request = $this->webhookSubscriptionShowRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -5772,9 +5772,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -5809,7 +5809,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookSubscriptionStore($x_tenant_id, $store_webhook_subscription_request, string $contentType = self::contentTypes['webhookSubscriptionStore'][0])
     {
@@ -5828,7 +5828,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookSubscriptionStoreWithHttpInfo($x_tenant_id, $store_webhook_subscription_request, string $contentType = self::contentTypes['webhookSubscriptionStore'][0])
     {
@@ -5859,11 +5859,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5881,16 +5881,16 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5908,7 +5908,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5954,7 +5954,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5987,7 +5987,7 @@ class BaaSWebhooksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5995,7 +5995,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6049,7 +6049,7 @@ class BaaSWebhooksApi
      */
     public function webhookSubscriptionStoreAsyncWithHttpInfo($x_tenant_id, $store_webhook_subscription_request, string $contentType = self::contentTypes['webhookSubscriptionStore'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
         $request = $this->webhookSubscriptionStoreRequest($x_tenant_id, $store_webhook_subscription_request, $contentType);
 
         return $this->client
@@ -6186,9 +6186,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -6224,7 +6224,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookSubscriptionUpdate($id, $x_tenant_id, $update_webhook_subscription_request, string $contentType = self::contentTypes['webhookSubscriptionUpdate'][0])
     {
@@ -6244,7 +6244,7 @@ class BaaSWebhooksApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookSubscriptionUpdateWithHttpInfo($id, $x_tenant_id, $update_webhook_subscription_request, string $contentType = self::contentTypes['webhookSubscriptionUpdate'][0])
     {
@@ -6275,11 +6275,11 @@ class BaaSWebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6297,7 +6297,7 @@ class BaaSWebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -6343,7 +6343,7 @@ class BaaSWebhooksApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6376,7 +6376,7 @@ class BaaSWebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6432,7 +6432,7 @@ class BaaSWebhooksApi
      */
     public function webhookSubscriptionUpdateAsyncWithHttpInfo($id, $x_tenant_id, $update_webhook_subscription_request, string $contentType = self::contentTypes['webhookSubscriptionUpdate'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionIndex200Response';
         $request = $this->webhookSubscriptionUpdateRequest($id, $x_tenant_id, $update_webhook_subscription_request, $contentType);
 
         return $this->client
@@ -6585,9 +6585,9 @@ class BaaSWebhooksApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];

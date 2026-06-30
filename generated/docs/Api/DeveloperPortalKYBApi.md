@@ -16,7 +16,7 @@ All URIs are relative to https://api.mizancore.ng, except if the operation defin
 ## `developerKybBusiness()`
 
 ```php
-developerKybBusiness($x_tenant_id, $update_kyb_business_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerKybBusiness($x_tenant_id, $update_kyb_business_request): \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response
 ```
 
 Update KYB business info
@@ -41,9 +41,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalKYBApi(
@@ -72,7 +72,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response**](../Model/DeveloperKybShow200Response.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ try {
 ## `developerKybDocumentsUpload()`
 
 ```php
-developerKybDocumentsUpload($x_tenant_id, $upload_kyb_document_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerKybDocumentsUpload($x_tenant_id, $upload_kyb_document_request): \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response
 ```
 
 Upload a KYB document
@@ -115,9 +115,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalKYBApi(
@@ -146,7 +146,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response**](../Model/WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ try {
 ## `developerKybOfficersAdd()`
 
 ```php
-developerKybOfficersAdd($x_tenant_id, $add_kyb_officer_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerKybOfficersAdd($x_tenant_id, $add_kyb_officer_request): \MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response
 ```
 
 Add a KYB officer
@@ -189,9 +189,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalKYBApi(
@@ -220,7 +220,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response**](../Model/DeveloperKybOfficersAdd201Response.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ try {
 ## `developerKybOfficersRemove()`
 
 ```php
-developerKybOfficersRemove($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerKybOfficersRemove($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response
 ```
 
 Remove a KYB officer
@@ -263,9 +263,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalKYBApi(
@@ -294,7 +294,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response**](../Model/WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ try {
 ## `developerKybOfficersUpdate()`
 
 ```php
-developerKybOfficersUpdate($id, $x_tenant_id, $update_kyb_officer_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerKybOfficersUpdate($id, $x_tenant_id, $update_kyb_officer_request): \MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response
 ```
 
 Update a KYB officer
@@ -337,9 +337,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalKYBApi(
@@ -370,7 +370,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperKybOfficersAdd201Response**](../Model/DeveloperKybOfficersAdd201Response.md)
 
 ### Authorization
 
@@ -388,7 +388,7 @@ try {
 ## `developerKybShow()`
 
 ```php
-developerKybShow($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerKybShow($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response
 ```
 
 Get KYB submission
@@ -413,9 +413,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalKYBApi(
@@ -442,7 +442,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response**](../Model/DeveloperKybShow200Response.md)
 
 ### Authorization
 
@@ -460,7 +460,7 @@ try {
 ## `developerKybSubmit()`
 
 ```php
-developerKybSubmit($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerKybSubmit($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response
 ```
 
 Submit KYB for review
@@ -485,9 +485,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalKYBApi(
@@ -514,7 +514,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\DeveloperKybShow200Response**](../Model/DeveloperKybShow200Response.md)
 
 ### Authorization
 

@@ -57,7 +57,37 @@ class VirtualAccountQueryIndex200ResponseData implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        
+        'id' => 'string',
+        'account_number' => 'string',
+        'account_name' => 'int',
+        'bank_code' => 'string',
+        'bank_name' => 'string',
+        'status' => 'string',
+        'type' => 'string',
+        'max_uses' => 'string',
+        'use_count' => 'int',
+        'expires_at' => '\DateTime',
+        'amount_validation' => 'string',
+        'amount' => 'string',
+        'bvn' => 'string',
+        'nin' => 'string',
+        'verified_name' => 'string',
+        'verification_source' => 'string',
+        'is_verified' => 'bool',
+        'company_name' => 'string',
+        'rc_number' => 'string',
+        'incorporation_date' => '\DateTime',
+        'director_bvn' => 'string',
+        'director_name' => 'string',
+        'customer_reference' => 'string',
+        'customer_data' => 'string',
+        'metadata' => 'object',
+        'has_individual_balance' => 'bool',
+        'balance' => 'int',
+        'available_balance' => 'int',
+        'ledger_account_id' => 'string',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime'
     ];
 
     /**
@@ -68,7 +98,37 @@ class VirtualAccountQueryIndex200ResponseData implements ModelInterface, ArrayAc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        
+        'id' => 'uuid',
+        'account_number' => null,
+        'account_name' => null,
+        'bank_code' => null,
+        'bank_name' => null,
+        'status' => null,
+        'type' => null,
+        'max_uses' => null,
+        'use_count' => null,
+        'expires_at' => 'date-time',
+        'amount_validation' => null,
+        'amount' => null,
+        'bvn' => null,
+        'nin' => null,
+        'verified_name' => null,
+        'verification_source' => null,
+        'is_verified' => null,
+        'company_name' => null,
+        'rc_number' => null,
+        'incorporation_date' => 'date-time',
+        'director_bvn' => null,
+        'director_name' => null,
+        'customer_reference' => null,
+        'customer_data' => null,
+        'metadata' => null,
+        'has_individual_balance' => null,
+        'balance' => null,
+        'available_balance' => null,
+        'ledger_account_id' => 'uuid',
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time'
     ];
 
     /**
@@ -77,7 +137,37 @@ class VirtualAccountQueryIndex200ResponseData implements ModelInterface, ArrayAc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        
+        'id' => false,
+        'account_number' => false,
+        'account_name' => false,
+        'bank_code' => false,
+        'bank_name' => false,
+        'status' => false,
+        'type' => false,
+        'max_uses' => false,
+        'use_count' => false,
+        'expires_at' => true,
+        'amount_validation' => false,
+        'amount' => true,
+        'bvn' => true,
+        'nin' => true,
+        'verified_name' => true,
+        'verification_source' => true,
+        'is_verified' => false,
+        'company_name' => true,
+        'rc_number' => true,
+        'incorporation_date' => true,
+        'director_bvn' => true,
+        'director_name' => true,
+        'customer_reference' => false,
+        'customer_data' => false,
+        'metadata' => true,
+        'has_individual_balance' => false,
+        'balance' => false,
+        'available_balance' => false,
+        'ledger_account_id' => false,
+        'created_at' => true,
+        'updated_at' => true
     ];
 
     /**
@@ -166,7 +256,37 @@ class VirtualAccountQueryIndex200ResponseData implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'id' => 'id',
+        'account_number' => 'account_number',
+        'account_name' => 'account_name',
+        'bank_code' => 'bank_code',
+        'bank_name' => 'bank_name',
+        'status' => 'status',
+        'type' => 'type',
+        'max_uses' => 'max_uses',
+        'use_count' => 'use_count',
+        'expires_at' => 'expires_at',
+        'amount_validation' => 'amount_validation',
+        'amount' => 'amount',
+        'bvn' => 'bvn',
+        'nin' => 'nin',
+        'verified_name' => 'verified_name',
+        'verification_source' => 'verification_source',
+        'is_verified' => 'is_verified',
+        'company_name' => 'company_name',
+        'rc_number' => 'rc_number',
+        'incorporation_date' => 'incorporation_date',
+        'director_bvn' => 'director_bvn',
+        'director_name' => 'director_name',
+        'customer_reference' => 'customer_reference',
+        'customer_data' => 'customer_data',
+        'metadata' => 'metadata',
+        'has_individual_balance' => 'has_individual_balance',
+        'balance' => 'balance',
+        'available_balance' => 'available_balance',
+        'ledger_account_id' => 'ledger_account_id',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     ];
 
     /**
@@ -175,7 +295,37 @@ class VirtualAccountQueryIndex200ResponseData implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $setters = [
-        
+        'id' => 'setId',
+        'account_number' => 'setAccountNumber',
+        'account_name' => 'setAccountName',
+        'bank_code' => 'setBankCode',
+        'bank_name' => 'setBankName',
+        'status' => 'setStatus',
+        'type' => 'setType',
+        'max_uses' => 'setMaxUses',
+        'use_count' => 'setUseCount',
+        'expires_at' => 'setExpiresAt',
+        'amount_validation' => 'setAmountValidation',
+        'amount' => 'setAmount',
+        'bvn' => 'setBvn',
+        'nin' => 'setNin',
+        'verified_name' => 'setVerifiedName',
+        'verification_source' => 'setVerificationSource',
+        'is_verified' => 'setIsVerified',
+        'company_name' => 'setCompanyName',
+        'rc_number' => 'setRcNumber',
+        'incorporation_date' => 'setIncorporationDate',
+        'director_bvn' => 'setDirectorBvn',
+        'director_name' => 'setDirectorName',
+        'customer_reference' => 'setCustomerReference',
+        'customer_data' => 'setCustomerData',
+        'metadata' => 'setMetadata',
+        'has_individual_balance' => 'setHasIndividualBalance',
+        'balance' => 'setBalance',
+        'available_balance' => 'setAvailableBalance',
+        'ledger_account_id' => 'setLedgerAccountId',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     ];
 
     /**
@@ -184,7 +334,37 @@ class VirtualAccountQueryIndex200ResponseData implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $getters = [
-        
+        'id' => 'getId',
+        'account_number' => 'getAccountNumber',
+        'account_name' => 'getAccountName',
+        'bank_code' => 'getBankCode',
+        'bank_name' => 'getBankName',
+        'status' => 'getStatus',
+        'type' => 'getType',
+        'max_uses' => 'getMaxUses',
+        'use_count' => 'getUseCount',
+        'expires_at' => 'getExpiresAt',
+        'amount_validation' => 'getAmountValidation',
+        'amount' => 'getAmount',
+        'bvn' => 'getBvn',
+        'nin' => 'getNin',
+        'verified_name' => 'getVerifiedName',
+        'verification_source' => 'getVerificationSource',
+        'is_verified' => 'getIsVerified',
+        'company_name' => 'getCompanyName',
+        'rc_number' => 'getRcNumber',
+        'incorporation_date' => 'getIncorporationDate',
+        'director_bvn' => 'getDirectorBvn',
+        'director_name' => 'getDirectorName',
+        'customer_reference' => 'getCustomerReference',
+        'customer_data' => 'getCustomerData',
+        'metadata' => 'getMetadata',
+        'has_individual_balance' => 'getHasIndividualBalance',
+        'balance' => 'getBalance',
+        'available_balance' => 'getAvailableBalance',
+        'ledger_account_id' => 'getLedgerAccountId',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     /**
@@ -244,6 +424,37 @@ class VirtualAccountQueryIndex200ResponseData implements ModelInterface, ArrayAc
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('account_number', $data ?? [], null);
+        $this->setIfExists('account_name', $data ?? [], null);
+        $this->setIfExists('bank_code', $data ?? [], null);
+        $this->setIfExists('bank_name', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('max_uses', $data ?? [], null);
+        $this->setIfExists('use_count', $data ?? [], null);
+        $this->setIfExists('expires_at', $data ?? [], null);
+        $this->setIfExists('amount_validation', $data ?? [], null);
+        $this->setIfExists('amount', $data ?? [], null);
+        $this->setIfExists('bvn', $data ?? [], null);
+        $this->setIfExists('nin', $data ?? [], null);
+        $this->setIfExists('verified_name', $data ?? [], null);
+        $this->setIfExists('verification_source', $data ?? [], null);
+        $this->setIfExists('is_verified', $data ?? [], null);
+        $this->setIfExists('company_name', $data ?? [], null);
+        $this->setIfExists('rc_number', $data ?? [], null);
+        $this->setIfExists('incorporation_date', $data ?? [], null);
+        $this->setIfExists('director_bvn', $data ?? [], null);
+        $this->setIfExists('director_name', $data ?? [], null);
+        $this->setIfExists('customer_reference', $data ?? [], null);
+        $this->setIfExists('customer_data', $data ?? [], null);
+        $this->setIfExists('metadata', $data ?? [], null);
+        $this->setIfExists('has_individual_balance', $data ?? [], null);
+        $this->setIfExists('balance', $data ?? [], null);
+        $this->setIfExists('available_balance', $data ?? [], null);
+        $this->setIfExists('ledger_account_id', $data ?? [], null);
+        $this->setIfExists('created_at', $data ?? [], null);
+        $this->setIfExists('updated_at', $data ?? [], null);
     }
 
     /**
@@ -287,6 +498,941 @@ class VirtualAccountQueryIndex200ResponseData implements ModelInterface, ArrayAc
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_number
+     *
+     * @return string|null
+     */
+    public function getAccountNumber()
+    {
+        return $this->container['account_number'];
+    }
+
+    /**
+     * Sets account_number
+     *
+     * @param string|null $account_number account_number
+     *
+     * @return self
+     */
+    public function setAccountNumber($account_number)
+    {
+        if (is_null($account_number)) {
+            throw new \InvalidArgumentException('non-nullable account_number cannot be null');
+        }
+        $this->container['account_number'] = $account_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_name
+     *
+     * @return int|null
+     */
+    public function getAccountName()
+    {
+        return $this->container['account_name'];
+    }
+
+    /**
+     * Sets account_name
+     *
+     * @param int|null $account_name account_name
+     *
+     * @return self
+     */
+    public function setAccountName($account_name)
+    {
+        if (is_null($account_name)) {
+            throw new \InvalidArgumentException('non-nullable account_name cannot be null');
+        }
+        $this->container['account_name'] = $account_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_code
+     *
+     * @return string|null
+     */
+    public function getBankCode()
+    {
+        return $this->container['bank_code'];
+    }
+
+    /**
+     * Sets bank_code
+     *
+     * @param string|null $bank_code bank_code
+     *
+     * @return self
+     */
+    public function setBankCode($bank_code)
+    {
+        if (is_null($bank_code)) {
+            throw new \InvalidArgumentException('non-nullable bank_code cannot be null');
+        }
+        $this->container['bank_code'] = $bank_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_name
+     *
+     * @return string|null
+     */
+    public function getBankName()
+    {
+        return $this->container['bank_name'];
+    }
+
+    /**
+     * Sets bank_name
+     *
+     * @param string|null $bank_name bank_name
+     *
+     * @return self
+     */
+    public function setBankName($bank_name)
+    {
+        if (is_null($bank_name)) {
+            throw new \InvalidArgumentException('non-nullable bank_name cannot be null');
+        }
+        $this->container['bank_name'] = $bank_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return string|null
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param string|null $status status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        if (is_null($status)) {
+            throw new \InvalidArgumentException('non-nullable status cannot be null');
+        }
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_uses
+     *
+     * @return string|null
+     */
+    public function getMaxUses()
+    {
+        return $this->container['max_uses'];
+    }
+
+    /**
+     * Sets max_uses
+     *
+     * @param string|null $max_uses max_uses
+     *
+     * @return self
+     */
+    public function setMaxUses($max_uses)
+    {
+        if (is_null($max_uses)) {
+            throw new \InvalidArgumentException('non-nullable max_uses cannot be null');
+        }
+        $this->container['max_uses'] = $max_uses;
+
+        return $this;
+    }
+
+    /**
+     * Gets use_count
+     *
+     * @return int|null
+     */
+    public function getUseCount()
+    {
+        return $this->container['use_count'];
+    }
+
+    /**
+     * Sets use_count
+     *
+     * @param int|null $use_count use_count
+     *
+     * @return self
+     */
+    public function setUseCount($use_count)
+    {
+        if (is_null($use_count)) {
+            throw new \InvalidArgumentException('non-nullable use_count cannot be null');
+        }
+        $this->container['use_count'] = $use_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets expires_at
+     *
+     * @return \DateTime|null
+     */
+    public function getExpiresAt()
+    {
+        return $this->container['expires_at'];
+    }
+
+    /**
+     * Sets expires_at
+     *
+     * @param \DateTime|null $expires_at expires_at
+     *
+     * @return self
+     */
+    public function setExpiresAt($expires_at)
+    {
+        if (is_null($expires_at)) {
+            array_push($this->openAPINullablesSetToNull, 'expires_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('expires_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['expires_at'] = $expires_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount_validation
+     *
+     * @return string|null
+     */
+    public function getAmountValidation()
+    {
+        return $this->container['amount_validation'];
+    }
+
+    /**
+     * Sets amount_validation
+     *
+     * @param string|null $amount_validation amount_validation
+     *
+     * @return self
+     */
+    public function setAmountValidation($amount_validation)
+    {
+        if (is_null($amount_validation)) {
+            throw new \InvalidArgumentException('non-nullable amount_validation cannot be null');
+        }
+        $this->container['amount_validation'] = $amount_validation;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount
+     *
+     * @return string|null
+     */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+     * Sets amount
+     *
+     * @param string|null $amount Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setAmount($amount)
+    {
+        if (is_null($amount)) {
+            array_push($this->openAPINullablesSetToNull, 'amount');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('amount', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets bvn
+     *
+     * @return string|null
+     */
+    public function getBvn()
+    {
+        return $this->container['bvn'];
+    }
+
+    /**
+     * Sets bvn
+     *
+     * @param string|null $bvn Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setBvn($bvn)
+    {
+        if (is_null($bvn)) {
+            array_push($this->openAPINullablesSetToNull, 'bvn');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('bvn', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['bvn'] = $bvn;
+
+        return $this;
+    }
+
+    /**
+     * Gets nin
+     *
+     * @return string|null
+     */
+    public function getNin()
+    {
+        return $this->container['nin'];
+    }
+
+    /**
+     * Sets nin
+     *
+     * @param string|null $nin Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setNin($nin)
+    {
+        if (is_null($nin)) {
+            array_push($this->openAPINullablesSetToNull, 'nin');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('nin', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['nin'] = $nin;
+
+        return $this;
+    }
+
+    /**
+     * Gets verified_name
+     *
+     * @return string|null
+     */
+    public function getVerifiedName()
+    {
+        return $this->container['verified_name'];
+    }
+
+    /**
+     * Sets verified_name
+     *
+     * @param string|null $verified_name Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setVerifiedName($verified_name)
+    {
+        if (is_null($verified_name)) {
+            array_push($this->openAPINullablesSetToNull, 'verified_name');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('verified_name', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['verified_name'] = $verified_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets verification_source
+     *
+     * @return string|null
+     */
+    public function getVerificationSource()
+    {
+        return $this->container['verification_source'];
+    }
+
+    /**
+     * Sets verification_source
+     *
+     * @param string|null $verification_source Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setVerificationSource($verification_source)
+    {
+        if (is_null($verification_source)) {
+            array_push($this->openAPINullablesSetToNull, 'verification_source');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('verification_source', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['verification_source'] = $verification_source;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_verified
+     *
+     * @return bool|null
+     */
+    public function getIsVerified()
+    {
+        return $this->container['is_verified'];
+    }
+
+    /**
+     * Sets is_verified
+     *
+     * @param bool|null $is_verified is_verified
+     *
+     * @return self
+     */
+    public function setIsVerified($is_verified)
+    {
+        if (is_null($is_verified)) {
+            throw new \InvalidArgumentException('non-nullable is_verified cannot be null');
+        }
+        $this->container['is_verified'] = $is_verified;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_name
+     *
+     * @return string|null
+     */
+    public function getCompanyName()
+    {
+        return $this->container['company_name'];
+    }
+
+    /**
+     * Sets company_name
+     *
+     * @param string|null $company_name Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setCompanyName($company_name)
+    {
+        if (is_null($company_name)) {
+            array_push($this->openAPINullablesSetToNull, 'company_name');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('company_name', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets rc_number
+     *
+     * @return string|null
+     */
+    public function getRcNumber()
+    {
+        return $this->container['rc_number'];
+    }
+
+    /**
+     * Sets rc_number
+     *
+     * @param string|null $rc_number Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setRcNumber($rc_number)
+    {
+        if (is_null($rc_number)) {
+            array_push($this->openAPINullablesSetToNull, 'rc_number');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('rc_number', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['rc_number'] = $rc_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets incorporation_date
+     *
+     * @return \DateTime|null
+     */
+    public function getIncorporationDate()
+    {
+        return $this->container['incorporation_date'];
+    }
+
+    /**
+     * Sets incorporation_date
+     *
+     * @param \DateTime|null $incorporation_date incorporation_date
+     *
+     * @return self
+     */
+    public function setIncorporationDate($incorporation_date)
+    {
+        if (is_null($incorporation_date)) {
+            array_push($this->openAPINullablesSetToNull, 'incorporation_date');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('incorporation_date', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['incorporation_date'] = $incorporation_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets director_bvn
+     *
+     * @return string|null
+     */
+    public function getDirectorBvn()
+    {
+        return $this->container['director_bvn'];
+    }
+
+    /**
+     * Sets director_bvn
+     *
+     * @param string|null $director_bvn Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setDirectorBvn($director_bvn)
+    {
+        if (is_null($director_bvn)) {
+            array_push($this->openAPINullablesSetToNull, 'director_bvn');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('director_bvn', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['director_bvn'] = $director_bvn;
+
+        return $this;
+    }
+
+    /**
+     * Gets director_name
+     *
+     * @return string|null
+     */
+    public function getDirectorName()
+    {
+        return $this->container['director_name'];
+    }
+
+    /**
+     * Sets director_name
+     *
+     * @param string|null $director_name Conditional field — included when the relation is loaded.
+     *
+     * @return self
+     */
+    public function setDirectorName($director_name)
+    {
+        if (is_null($director_name)) {
+            array_push($this->openAPINullablesSetToNull, 'director_name');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('director_name', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['director_name'] = $director_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_reference
+     *
+     * @return string|null
+     */
+    public function getCustomerReference()
+    {
+        return $this->container['customer_reference'];
+    }
+
+    /**
+     * Sets customer_reference
+     *
+     * @param string|null $customer_reference customer_reference
+     *
+     * @return self
+     */
+    public function setCustomerReference($customer_reference)
+    {
+        if (is_null($customer_reference)) {
+            throw new \InvalidArgumentException('non-nullable customer_reference cannot be null');
+        }
+        $this->container['customer_reference'] = $customer_reference;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_data
+     *
+     * @return string|null
+     */
+    public function getCustomerData()
+    {
+        return $this->container['customer_data'];
+    }
+
+    /**
+     * Sets customer_data
+     *
+     * @param string|null $customer_data customer_data
+     *
+     * @return self
+     */
+    public function setCustomerData($customer_data)
+    {
+        if (is_null($customer_data)) {
+            throw new \InvalidArgumentException('non-nullable customer_data cannot be null');
+        }
+        $this->container['customer_data'] = $customer_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets metadata
+     *
+     * @return object|null
+     */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+     * Sets metadata
+     *
+     * @param object|null $metadata metadata
+     *
+     * @return self
+     */
+    public function setMetadata($metadata)
+    {
+        if (is_null($metadata)) {
+            array_push($this->openAPINullablesSetToNull, 'metadata');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('metadata', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['metadata'] = $metadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_individual_balance
+     *
+     * @return bool|null
+     */
+    public function getHasIndividualBalance()
+    {
+        return $this->container['has_individual_balance'];
+    }
+
+    /**
+     * Sets has_individual_balance
+     *
+     * @param bool|null $has_individual_balance has_individual_balance
+     *
+     * @return self
+     */
+    public function setHasIndividualBalance($has_individual_balance)
+    {
+        if (is_null($has_individual_balance)) {
+            throw new \InvalidArgumentException('non-nullable has_individual_balance cannot be null');
+        }
+        $this->container['has_individual_balance'] = $has_individual_balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets balance
+     *
+     * @return int|null
+     */
+    public function getBalance()
+    {
+        return $this->container['balance'];
+    }
+
+    /**
+     * Sets balance
+     *
+     * @param int|null $balance Amount in kobo (minor currency units).
+     *
+     * @return self
+     */
+    public function setBalance($balance)
+    {
+        if (is_null($balance)) {
+            throw new \InvalidArgumentException('non-nullable balance cannot be null');
+        }
+        $this->container['balance'] = $balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets available_balance
+     *
+     * @return int|null
+     */
+    public function getAvailableBalance()
+    {
+        return $this->container['available_balance'];
+    }
+
+    /**
+     * Sets available_balance
+     *
+     * @param int|null $available_balance Amount in kobo (minor currency units).
+     *
+     * @return self
+     */
+    public function setAvailableBalance($available_balance)
+    {
+        if (is_null($available_balance)) {
+            throw new \InvalidArgumentException('non-nullable available_balance cannot be null');
+        }
+        $this->container['available_balance'] = $available_balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets ledger_account_id
+     *
+     * @return string|null
+     */
+    public function getLedgerAccountId()
+    {
+        return $this->container['ledger_account_id'];
+    }
+
+    /**
+     * Sets ledger_account_id
+     *
+     * @param string|null $ledger_account_id ledger_account_id
+     *
+     * @return self
+     */
+    public function setLedgerAccountId($ledger_account_id)
+    {
+        if (is_null($ledger_account_id)) {
+            throw new \InvalidArgumentException('non-nullable ledger_account_id cannot be null');
+        }
+        $this->container['ledger_account_id'] = $ledger_account_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime|null $created_at created_at
+     *
+     * @return self
+     */
+    public function setCreatedAt($created_at)
+    {
+        if (is_null($created_at)) {
+            array_push($this->openAPINullablesSetToNull, 'created_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('created_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     *
+     * @param \DateTime|null $updated_at updated_at
+     *
+     * @return self
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        if (is_null($updated_at)) {
+            array_push($this->openAPINullablesSetToNull, 'updated_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('updated_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

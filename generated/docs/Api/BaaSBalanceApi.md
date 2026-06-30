@@ -12,7 +12,7 @@ All URIs are relative to https://api.mizancore.ng, except if the operation defin
 ## `baasBalanceBalance()`
 
 ```php
-baasBalanceBalance($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+baasBalanceBalance($x_tenant_id): \MizanCore\BaasSdk\Generated\Model\PartnerWalletBalance200Response
 ```
 
 Get settlement account balance
@@ -37,9 +37,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSBalanceApi(
@@ -66,7 +66,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\PartnerWalletBalance200Response**](../Model/PartnerWalletBalance200Response.md)
 
 ### Authorization
 
@@ -84,12 +84,12 @@ try {
 ## `baasBalanceFeePreview()`
 
 ```php
-baasBalanceFeePreview($x_tenant_id, $fee_preview_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+baasBalanceFeePreview($x_tenant_id, $fee_preview_request): \MizanCore\BaasSdk\Generated\Model\BaasBalanceFeePreview201Response
 ```
 
 Preview withdrawal fee
 
-Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
 ### Example
 
@@ -109,9 +109,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSBalanceApi(
@@ -140,7 +140,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\BaasBalanceFeePreview201Response**](../Model/BaasBalanceFeePreview201Response.md)
 
 ### Authorization
 
@@ -158,12 +158,12 @@ try {
 ## `developerWithdrawalsFeePreview()`
 
 ```php
-developerWithdrawalsFeePreview($x_tenant_id, $fee_preview_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerWithdrawalsFeePreview($x_tenant_id, $fee_preview_request): \MizanCore\BaasSdk\Generated\Model\BaasBalanceFeePreview201Response
 ```
 
 Preview withdrawal fee
 
-Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
 ### Example
 
@@ -183,9 +183,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSBalanceApi(
@@ -214,7 +214,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\BaasBalanceFeePreview201Response**](../Model/BaasBalanceFeePreview201Response.md)
 
 ### Authorization
 

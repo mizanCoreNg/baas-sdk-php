@@ -135,7 +135,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookDeliveryLogIndex($x_tenant_id, string $contentType = self::contentTypes['webhookDeliveryLogIndex'][0])
     {
@@ -153,7 +153,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookDeliveryLogIndexWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['webhookDeliveryLogIndex'][0])
     {
@@ -184,11 +184,11 @@ class DeveloperPortalWebhookDeliveryLogsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,7 +206,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -252,7 +252,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -285,7 +285,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -337,7 +337,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
      */
     public function webhookDeliveryLogIndexAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['webhookDeliveryLogIndex'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->webhookDeliveryLogIndexRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -459,9 +459,9 @@ class DeveloperPortalWebhookDeliveryLogsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -496,7 +496,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response|\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function webhookDeliveryLogRetry($id, $x_tenant_id, string $contentType = self::contentTypes['webhookDeliveryLogRetry'][0])
     {
@@ -515,7 +515,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response|\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookDeliveryLogRetryWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookDeliveryLogRetry'][0])
     {
@@ -546,11 +546,11 @@ class DeveloperPortalWebhookDeliveryLogsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -568,16 +568,16 @@ class DeveloperPortalWebhookDeliveryLogsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -595,7 +595,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -668,7 +668,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -701,7 +701,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -709,7 +709,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -771,7 +771,7 @@ class DeveloperPortalWebhookDeliveryLogsApi
      */
     public function webhookDeliveryLogRetryAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['webhookDeliveryLogRetry'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookDeliveryLogRetry201Response';
         $request = $this->webhookDeliveryLogRetryRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -909,9 +909,9 @@ class DeveloperPortalWebhookDeliveryLogsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];

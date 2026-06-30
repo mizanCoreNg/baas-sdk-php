@@ -60,9 +60,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\BaaSBalanceApi(
@@ -91,6 +91,8 @@ Class | Method | HTTP request | Description
 *BaaSBalanceApi* | [**baasBalanceBalance**](docs/Api/BaaSBalanceApi.md#baasbalancebalance) | **GET** /api/v1/baas/balance | Get settlement account balance
 *BaaSBalanceApi* | [**baasBalanceFeePreview**](docs/Api/BaaSBalanceApi.md#baasbalancefeepreview) | **POST** /api/v1/baas/withdrawals/fee-preview | Preview withdrawal fee
 *BaaSBalanceApi* | [**developerWithdrawalsFeePreview**](docs/Api/BaaSBalanceApi.md#developerwithdrawalsfeepreview) | **POST** /api/v1/developer/withdrawals/fee-preview | Preview withdrawal fee
+*BaaSFeesApi* | [**developerFeesIndex**](docs/Api/BaaSFeesApi.md#developerfeesindex) | **GET** /api/v1/developer/fees | Get partner fee schedule
+*BaaSFeesApi* | [**partnerFeeScheduleIndex**](docs/Api/BaaSFeesApi.md#partnerfeescheduleindex) | **GET** /api/v1/baas/fees | Get partner fee schedule
 *BaaSTransactionsApi* | [**developerTransactionsIndex**](docs/Api/BaaSTransactionsApi.md#developertransactionsindex) | **GET** /api/v1/developer/transactions | List partner transactions
 *BaaSTransactionsApi* | [**developerTransactionsShow**](docs/Api/BaaSTransactionsApi.md#developertransactionsshow) | **GET** /api/v1/developer/transactions/{id} | Get transaction details
 *BaaSTransactionsApi* | [**partnerTransactionIndex**](docs/Api/BaaSTransactionsApi.md#partnertransactionindex) | **GET** /api/v1/baas/transactions | List partner transactions
@@ -220,9 +222,32 @@ Class | Method | HTTP request | Description
 
 - [AcceptInviteRequest](docs/Model/AcceptInviteRequest.md)
 - [AddKybOfficerRequest](docs/Model/AddKybOfficerRequest.md)
+- [ApiKeyResource](docs/Model/ApiKeyResource.md)
+- [BaasBalanceFeePreview201Response](docs/Model/BaasBalanceFeePreview201Response.md)
+- [BaasBalanceFeePreview201ResponseData](docs/Model/BaasBalanceFeePreview201ResponseData.md)
+- [BaasTransactionResource](docs/Model/BaasTransactionResource.md)
 - [ChangeMemberRoleRequest](docs/Model/ChangeMemberRoleRequest.md)
 - [CreateApiKeyRequest](docs/Model/CreateApiKeyRequest.md)
+- [DeveloperApiKeyStore201Response](docs/Model/DeveloperApiKeyStore201Response.md)
+- [DeveloperApiKeyStore201ResponseData](docs/Model/DeveloperApiKeyStore201ResponseData.md)
+- [DeveloperAuthMe200Response](docs/Model/DeveloperAuthMe200Response.md)
+- [DeveloperAuthMe200ResponseData](docs/Model/DeveloperAuthMe200ResponseData.md)
+- [DeveloperKybOfficersAdd201Response](docs/Model/DeveloperKybOfficersAdd201Response.md)
+- [DeveloperKybOfficersAdd201ResponseData](docs/Model/DeveloperKybOfficersAdd201ResponseData.md)
+- [DeveloperKybShow200Response](docs/Model/DeveloperKybShow200Response.md)
+- [DeveloperKybShow200ResponseData](docs/Model/DeveloperKybShow200ResponseData.md)
 - [DeveloperLoginRequest](docs/Model/DeveloperLoginRequest.md)
+- [DeveloperRegistrationRegister201Response](docs/Model/DeveloperRegistrationRegister201Response.md)
+- [DeveloperRegistrationRegister201ResponseData](docs/Model/DeveloperRegistrationRegister201ResponseData.md)
+- [DeveloperRegistrationResource](docs/Model/DeveloperRegistrationResource.md)
+- [DeveloperSandboxStatus200Response](docs/Model/DeveloperSandboxStatus200Response.md)
+- [DeveloperSandboxStatus200ResponseData](docs/Model/DeveloperSandboxStatus200ResponseData.md)
+- [DeveloperSandboxTestData200Response](docs/Model/DeveloperSandboxTestData200Response.md)
+- [DeveloperSandboxTestData200ResponseData](docs/Model/DeveloperSandboxTestData200ResponseData.md)
+- [DeveloperStatementsIndex200Response](docs/Model/DeveloperStatementsIndex200Response.md)
+- [DeveloperStatementsIndex200ResponseData](docs/Model/DeveloperStatementsIndex200ResponseData.md)
+- [DeveloperTeamAcceptInvite201Response](docs/Model/DeveloperTeamAcceptInvite201Response.md)
+- [DeveloperTeamAcceptInvite201ResponseData](docs/Model/DeveloperTeamAcceptInvite201ResponseData.md)
 - [DeveloperVerifyMfaRequest](docs/Model/DeveloperVerifyMfaRequest.md)
 - [ErrorResponse](docs/Model/ErrorResponse.md)
 - [FeePreviewRequest](docs/Model/FeePreviewRequest.md)
@@ -235,13 +260,47 @@ Class | Method | HTTP request | Description
 - [IssueManagedCardRequest](docs/Model/IssueManagedCardRequest.md)
 - [IssueManagedCardRequestLimits](docs/Model/IssueManagedCardRequestLimits.md)
 - [ListManagedCardTransactionsRequest](docs/Model/ListManagedCardTransactionsRequest.md)
+- [ManagedAccountIndex200Response](docs/Model/ManagedAccountIndex200Response.md)
+- [ManagedAccountIndex200ResponseData](docs/Model/ManagedAccountIndex200ResponseData.md)
+- [ManagedAccountResource](docs/Model/ManagedAccountResource.md)
+- [ManagedCardReadIndex200Response](docs/Model/ManagedCardReadIndex200Response.md)
+- [ManagedCardReadIndex200ResponseData](docs/Model/ManagedCardReadIndex200ResponseData.md)
+- [ManagedCardReadTransactions200Response](docs/Model/ManagedCardReadTransactions200Response.md)
+- [ManagedCardReadTransactions200ResponseData](docs/Model/ManagedCardReadTransactions200ResponseData.md)
+- [ManagedCardResource](docs/Model/ManagedCardResource.md)
+- [ManagedCardTransactionResource](docs/Model/ManagedCardTransactionResource.md)
+- [ManagedCustomerIndex200Response](docs/Model/ManagedCustomerIndex200Response.md)
+- [ManagedCustomerIndex200ResponseData](docs/Model/ManagedCustomerIndex200ResponseData.md)
 - [ManagedCustomerLifecycleRequest](docs/Model/ManagedCustomerLifecycleRequest.md)
+- [ManagedCustomerLinkResource](docs/Model/ManagedCustomerLinkResource.md)
+- [ManagedCustomerStatementShow200Response](docs/Model/ManagedCustomerStatementShow200Response.md)
+- [ManagedCustomerStatementShow200ResponseData](docs/Model/ManagedCustomerStatementShow200ResponseData.md)
+- [ManagedStatementResource](docs/Model/ManagedStatementResource.md)
 - [OnboardManagedCustomerRequest](docs/Model/OnboardManagedCustomerRequest.md)
 - [OpenManagedAccountRequest](docs/Model/OpenManagedAccountRequest.md)
+- [PartnerBalanceResource](docs/Model/PartnerBalanceResource.md)
+- [PartnerConsentIndex200Response](docs/Model/PartnerConsentIndex200Response.md)
+- [PartnerConsentIndex200ResponseData](docs/Model/PartnerConsentIndex200ResponseData.md)
+- [PartnerConsentResource](docs/Model/PartnerConsentResource.md)
+- [PartnerFeeScheduleIndex200Response](docs/Model/PartnerFeeScheduleIndex200Response.md)
+- [PartnerFeeScheduleIndex200ResponseData](docs/Model/PartnerFeeScheduleIndex200ResponseData.md)
+- [PartnerFeeScheduleResource](docs/Model/PartnerFeeScheduleResource.md)
+- [PartnerKybOfficerResource](docs/Model/PartnerKybOfficerResource.md)
+- [PartnerKybSubmissionResource](docs/Model/PartnerKybSubmissionResource.md)
+- [PartnerStatementResource](docs/Model/PartnerStatementResource.md)
+- [PartnerTeamMemberResource](docs/Model/PartnerTeamMemberResource.md)
+- [PartnerTransactionIndex200Response](docs/Model/PartnerTransactionIndex200Response.md)
+- [PartnerTransactionIndex200ResponseData](docs/Model/PartnerTransactionIndex200ResponseData.md)
+- [PartnerUserResource](docs/Model/PartnerUserResource.md)
+- [PartnerWalletBalance200Response](docs/Model/PartnerWalletBalance200Response.md)
+- [PartnerWalletBalance200ResponseData](docs/Model/PartnerWalletBalance200ResponseData.md)
+- [RateLimitStatusResource](docs/Model/RateLimitStatusResource.md)
 - [RecordConsentRequest](docs/Model/RecordConsentRequest.md)
 - [RegisterDeveloperRequest](docs/Model/RegisterDeveloperRequest.md)
 - [RevokeApiKeyRequest](docs/Model/RevokeApiKeyRequest.md)
 - [RevokeConsentRequest](docs/Model/RevokeConsentRequest.md)
+- [SandboxStatusResource](docs/Model/SandboxStatusResource.md)
+- [SandboxTestDataResource](docs/Model/SandboxTestDataResource.md)
 - [SendTestWebhookRequest](docs/Model/SendTestWebhookRequest.md)
 - [SetManagedCardLimitsRequest](docs/Model/SetManagedCardLimitsRequest.md)
 - [SetManagedCardLimitsRequestLimits](docs/Model/SetManagedCardLimitsRequestLimits.md)
@@ -253,10 +312,28 @@ Class | Method | HTTP request | Description
 - [UpdateKybOfficerRequest](docs/Model/UpdateKybOfficerRequest.md)
 - [UpdateWebhookSubscriptionRequest](docs/Model/UpdateWebhookSubscriptionRequest.md)
 - [UploadKybDocumentRequest](docs/Model/UploadKybDocumentRequest.md)
+- [UsageAnalyticsRateLimitStatus200Response](docs/Model/UsageAnalyticsRateLimitStatus200Response.md)
+- [UsageAnalyticsRateLimitStatus200ResponseData](docs/Model/UsageAnalyticsRateLimitStatus200ResponseData.md)
+- [UsageAnalyticsResource](docs/Model/UsageAnalyticsResource.md)
+- [UsageAnalyticsSummary200Response](docs/Model/UsageAnalyticsSummary200Response.md)
+- [UsageAnalyticsSummary200ResponseData](docs/Model/UsageAnalyticsSummary200ResponseData.md)
 - [ValidationError](docs/Model/ValidationError.md)
 - [VerifyDeveloperEmailRequest](docs/Model/VerifyDeveloperEmailRequest.md)
 - [VirtualAccountQueryIndex200Response](docs/Model/VirtualAccountQueryIndex200Response.md)
 - [VirtualAccountQueryIndex200ResponseData](docs/Model/VirtualAccountQueryIndex200ResponseData.md)
+- [VirtualAccountResource](docs/Model/VirtualAccountResource.md)
+- [WebhookDeliveryLogResource](docs/Model/WebhookDeliveryLogResource.md)
+- [WebhookDeliveryLogRetry201Response](docs/Model/WebhookDeliveryLogRetry201Response.md)
+- [WebhookDeliveryLogRetry201ResponseData](docs/Model/WebhookDeliveryLogRetry201ResponseData.md)
+- [WebhookDeliveryResource](docs/Model/WebhookDeliveryResource.md)
+- [WebhookSubscriptionDestroy204Response](docs/Model/WebhookSubscriptionDestroy204Response.md)
+- [WebhookSubscriptionDestroy204ResponseData](docs/Model/WebhookSubscriptionDestroy204ResponseData.md)
+- [WebhookSubscriptionIndex200Response](docs/Model/WebhookSubscriptionIndex200Response.md)
+- [WebhookSubscriptionIndex200ResponseData](docs/Model/WebhookSubscriptionIndex200ResponseData.md)
+- [WebhookSubscriptionOperationsDeliveries200Response](docs/Model/WebhookSubscriptionOperationsDeliveries200Response.md)
+- [WebhookSubscriptionOperationsDeliveries200ResponseData](docs/Model/WebhookSubscriptionOperationsDeliveries200ResponseData.md)
+- [WebhookSubscriptionResource](docs/Model/WebhookSubscriptionResource.md)
+- [WithdrawalFeePreviewResource](docs/Model/WithdrawalFeePreviewResource.md)
 
 ## Authorization
 
@@ -264,7 +341,7 @@ Authentication schemes defined for the API:
 ### apiKeyAuth
 
 - **Type**: API key
-- **API key parameter name**: X-Partner-Key
+- **API key parameter name**: X-API-Key
 - **Location**: HTTP header
 
 

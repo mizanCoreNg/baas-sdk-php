@@ -136,7 +136,7 @@ class DeveloperPortalManagedStatementsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerAccountsStatement($account_id, $x_tenant_id, string $contentType = self::contentTypes['developerAccountsStatement'][0])
     {
@@ -155,7 +155,7 @@ class DeveloperPortalManagedStatementsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerAccountsStatementWithHttpInfo($account_id, $x_tenant_id, string $contentType = self::contentTypes['developerAccountsStatement'][0])
     {
@@ -186,11 +186,11 @@ class DeveloperPortalManagedStatementsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -208,7 +208,7 @@ class DeveloperPortalManagedStatementsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -254,7 +254,7 @@ class DeveloperPortalManagedStatementsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -287,7 +287,7 @@ class DeveloperPortalManagedStatementsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -341,7 +341,7 @@ class DeveloperPortalManagedStatementsApi
      */
     public function developerAccountsStatementAsyncWithHttpInfo($account_id, $x_tenant_id, string $contentType = self::contentTypes['developerAccountsStatement'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response';
         $request = $this->developerAccountsStatementRequest($account_id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -479,9 +479,9 @@ class DeveloperPortalManagedStatementsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -516,7 +516,7 @@ class DeveloperPortalManagedStatementsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCustomerStatementShow($account_id, $x_tenant_id, string $contentType = self::contentTypes['managedCustomerStatementShow'][0])
     {
@@ -535,7 +535,7 @@ class DeveloperPortalManagedStatementsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCustomerStatementShowWithHttpInfo($account_id, $x_tenant_id, string $contentType = self::contentTypes['managedCustomerStatementShow'][0])
     {
@@ -566,11 +566,11 @@ class DeveloperPortalManagedStatementsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -588,7 +588,7 @@ class DeveloperPortalManagedStatementsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -634,7 +634,7 @@ class DeveloperPortalManagedStatementsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -667,7 +667,7 @@ class DeveloperPortalManagedStatementsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -721,7 +721,7 @@ class DeveloperPortalManagedStatementsApi
      */
     public function managedCustomerStatementShowAsyncWithHttpInfo($account_id, $x_tenant_id, string $contentType = self::contentTypes['managedCustomerStatementShow'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCustomerStatementShow200Response';
         $request = $this->managedCustomerStatementShowRequest($account_id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -859,9 +859,9 @@ class DeveloperPortalManagedStatementsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];

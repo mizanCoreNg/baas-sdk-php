@@ -148,7 +148,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerTeamAcceptInvite($x_tenant_id, $accept_invite_request, string $contentType = self::contentTypes['developerTeamAcceptInvite'][0])
     {
@@ -167,7 +167,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerTeamAcceptInviteWithHttpInfo($x_tenant_id, $accept_invite_request, string $contentType = self::contentTypes['developerTeamAcceptInvite'][0])
     {
@@ -198,11 +198,11 @@ class DeveloperPortalTeamApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -220,16 +220,16 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -247,7 +247,7 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -293,7 +293,7 @@ class DeveloperPortalTeamApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -326,7 +326,7 @@ class DeveloperPortalTeamApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -334,7 +334,7 @@ class DeveloperPortalTeamApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -388,7 +388,7 @@ class DeveloperPortalTeamApi
      */
     public function developerTeamAcceptInviteAsyncWithHttpInfo($x_tenant_id, $accept_invite_request, string $contentType = self::contentTypes['developerTeamAcceptInvite'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
         $request = $this->developerTeamAcceptInviteRequest($x_tenant_id, $accept_invite_request, $contentType);
 
         return $this->client
@@ -546,7 +546,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerTeamIndex($x_tenant_id, string $contentType = self::contentTypes['developerTeamIndex'][0])
     {
@@ -564,7 +564,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerTeamIndexWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['developerTeamIndex'][0])
     {
@@ -595,11 +595,11 @@ class DeveloperPortalTeamApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -617,7 +617,7 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -663,7 +663,7 @@ class DeveloperPortalTeamApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -696,7 +696,7 @@ class DeveloperPortalTeamApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -748,7 +748,7 @@ class DeveloperPortalTeamApi
      */
     public function developerTeamIndexAsyncWithHttpInfo($x_tenant_id, string $contentType = self::contentTypes['developerTeamIndex'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
         $request = $this->developerTeamIndexRequest($x_tenant_id, $contentType);
 
         return $this->client
@@ -870,9 +870,9 @@ class DeveloperPortalTeamApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -907,7 +907,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerTeamInvite($x_tenant_id, $invite_member_request, string $contentType = self::contentTypes['developerTeamInvite'][0])
     {
@@ -926,7 +926,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerTeamInviteWithHttpInfo($x_tenant_id, $invite_member_request, string $contentType = self::contentTypes['developerTeamInvite'][0])
     {
@@ -957,11 +957,11 @@ class DeveloperPortalTeamApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -979,16 +979,16 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1006,7 +1006,7 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1052,7 +1052,7 @@ class DeveloperPortalTeamApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1085,7 +1085,7 @@ class DeveloperPortalTeamApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1093,7 +1093,7 @@ class DeveloperPortalTeamApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1147,7 +1147,7 @@ class DeveloperPortalTeamApi
      */
     public function developerTeamInviteAsyncWithHttpInfo($x_tenant_id, $invite_member_request, string $contentType = self::contentTypes['developerTeamInvite'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
         $request = $this->developerTeamInviteRequest($x_tenant_id, $invite_member_request, $contentType);
 
         return $this->client
@@ -1284,9 +1284,9 @@ class DeveloperPortalTeamApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1321,7 +1321,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerTeamRemove($id, $x_tenant_id, string $contentType = self::contentTypes['developerTeamRemove'][0])
     {
@@ -1340,7 +1340,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerTeamRemoveWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerTeamRemove'][0])
     {
@@ -1371,11 +1371,11 @@ class DeveloperPortalTeamApi
 
             switch($statusCode) {
                 case 204:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1393,16 +1393,16 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1420,7 +1420,7 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1466,7 +1466,7 @@ class DeveloperPortalTeamApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1499,7 +1499,7 @@ class DeveloperPortalTeamApi
                 case 204:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1507,7 +1507,7 @@ class DeveloperPortalTeamApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1561,7 +1561,7 @@ class DeveloperPortalTeamApi
      */
     public function developerTeamRemoveAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerTeamRemove'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\WebhookSubscriptionDestroy204Response';
         $request = $this->developerTeamRemoveRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -1699,9 +1699,9 @@ class DeveloperPortalTeamApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1736,7 +1736,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerTeamResendInvite($id, $x_tenant_id, string $contentType = self::contentTypes['developerTeamResendInvite'][0])
     {
@@ -1755,7 +1755,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerTeamResendInviteWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerTeamResendInvite'][0])
     {
@@ -1786,11 +1786,11 @@ class DeveloperPortalTeamApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1808,16 +1808,16 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1835,7 +1835,7 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1881,7 +1881,7 @@ class DeveloperPortalTeamApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1914,7 +1914,7 @@ class DeveloperPortalTeamApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1922,7 +1922,7 @@ class DeveloperPortalTeamApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1976,7 +1976,7 @@ class DeveloperPortalTeamApi
      */
     public function developerTeamResendInviteAsyncWithHttpInfo($id, $x_tenant_id, string $contentType = self::contentTypes['developerTeamResendInvite'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
         $request = $this->developerTeamResendInviteRequest($id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -2114,9 +2114,9 @@ class DeveloperPortalTeamApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -2152,7 +2152,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerTeamRole($id, $x_tenant_id, $change_member_role_request, string $contentType = self::contentTypes['developerTeamRole'][0])
     {
@@ -2172,7 +2172,7 @@ class DeveloperPortalTeamApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerTeamRoleWithHttpInfo($id, $x_tenant_id, $change_member_role_request, string $contentType = self::contentTypes['developerTeamRole'][0])
     {
@@ -2203,11 +2203,11 @@ class DeveloperPortalTeamApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2225,7 +2225,7 @@ class DeveloperPortalTeamApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2271,7 +2271,7 @@ class DeveloperPortalTeamApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2304,7 +2304,7 @@ class DeveloperPortalTeamApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2360,7 +2360,7 @@ class DeveloperPortalTeamApi
      */
     public function developerTeamRoleAsyncWithHttpInfo($id, $x_tenant_id, $change_member_role_request, string $contentType = self::contentTypes['developerTeamRole'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\DeveloperTeamAcceptInvite201Response';
         $request = $this->developerTeamRoleRequest($id, $x_tenant_id, $change_member_role_request, $contentType);
 
         return $this->client
@@ -2513,9 +2513,9 @@ class DeveloperPortalTeamApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];

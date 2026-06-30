@@ -187,7 +187,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsFreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['developerCustomersAccountsCardsFreeze'][0])
     {
@@ -209,7 +209,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsFreezeWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['developerCustomersAccountsCardsFreeze'][0])
     {
@@ -240,11 +240,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -262,16 +262,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -289,7 +289,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -389,7 +389,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -422,7 +422,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -430,7 +430,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsFreezeAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['developerCustomersAccountsCardsFreeze'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->developerCustomersAccountsCardsFreezeRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $contentType);
 
         return $this->client
@@ -697,9 +697,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -735,7 +735,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsIndex($customer_id, $account_id, $x_tenant_id, string $contentType = self::contentTypes['developerCustomersAccountsCardsIndex'][0])
     {
@@ -755,7 +755,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsIndexWithHttpInfo($customer_id, $account_id, $x_tenant_id, string $contentType = self::contentTypes['developerCustomersAccountsCardsIndex'][0])
     {
@@ -786,11 +786,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -808,7 +808,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -854,7 +854,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -887,7 +887,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -943,7 +943,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsIndexAsyncWithHttpInfo($customer_id, $account_id, $x_tenant_id, string $contentType = self::contentTypes['developerCustomersAccountsCardsIndex'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->developerCustomersAccountsCardsIndexRequest($customer_id, $account_id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -1097,9 +1097,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1137,7 +1137,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsIssue($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsIssue'][0])
     {
@@ -1159,7 +1159,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsIssueWithHttpInfo($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsIssue'][0])
     {
@@ -1190,11 +1190,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1212,16 +1212,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1239,7 +1239,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1312,7 +1312,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1345,7 +1345,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1353,7 +1353,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1421,7 +1421,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsIssueAsyncWithHttpInfo($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsIssue'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->developerCustomersAccountsCardsIssueRequest($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request, $contentType);
 
         return $this->client
@@ -1611,9 +1611,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1652,7 +1652,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsLimits($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsLimits'][0])
     {
@@ -1675,7 +1675,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsLimitsWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsLimits'][0])
     {
@@ -1706,11 +1706,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1728,7 +1728,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1801,7 +1801,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1834,7 +1834,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1904,7 +1904,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsLimitsAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsLimits'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->developerCustomersAccountsCardsLimitsRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request, $contentType);
 
         return $this->client
@@ -2110,9 +2110,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -2151,7 +2151,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsPin($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsPin'][0])
     {
@@ -2174,7 +2174,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsPinWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsPin'][0])
     {
@@ -2205,11 +2205,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2227,16 +2227,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2254,7 +2254,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2327,7 +2327,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2360,7 +2360,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2368,7 +2368,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2438,7 +2438,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsPinAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsPin'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->developerCustomersAccountsCardsPinRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request, $contentType);
 
         return $this->client
@@ -2644,9 +2644,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -2683,7 +2683,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsShow($customer_id, $account_id, $card_id, $x_tenant_id, string $contentType = self::contentTypes['developerCustomersAccountsCardsShow'][0])
     {
@@ -2704,7 +2704,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsShowWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, string $contentType = self::contentTypes['developerCustomersAccountsCardsShow'][0])
     {
@@ -2735,11 +2735,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2757,7 +2757,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2803,7 +2803,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2836,7 +2836,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2894,7 +2894,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsShowAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, string $contentType = self::contentTypes['developerCustomersAccountsCardsShow'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->developerCustomersAccountsCardsShowRequest($customer_id, $account_id, $card_id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -3064,9 +3064,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -3105,7 +3105,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsTerminate($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsTerminate'][0])
     {
@@ -3128,7 +3128,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsTerminateWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsTerminate'][0])
     {
@@ -3159,11 +3159,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3181,16 +3181,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3208,7 +3208,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3308,7 +3308,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3341,7 +3341,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3349,7 +3349,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3427,7 +3427,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsTerminateAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request, string $contentType = self::contentTypes['developerCustomersAccountsCardsTerminate'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->developerCustomersAccountsCardsTerminateRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request, $contentType);
 
         return $this->client
@@ -3633,9 +3633,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -3674,7 +3674,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsTransactions($customer_id, $account_id, $card_id, $x_tenant_id, $per_page = null, $page = null, string $contentType = self::contentTypes['developerCustomersAccountsCardsTransactions'][0])
     {
@@ -3697,7 +3697,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsTransactionsWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $per_page = null, $page = null, string $contentType = self::contentTypes['developerCustomersAccountsCardsTransactions'][0])
     {
@@ -3728,11 +3728,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3750,7 +3750,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3796,7 +3796,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3829,7 +3829,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3891,7 +3891,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsTransactionsAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $per_page = null, $page = null, string $contentType = self::contentTypes['developerCustomersAccountsCardsTransactions'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response';
         $request = $this->developerCustomersAccountsCardsTransactionsRequest($customer_id, $account_id, $card_id, $x_tenant_id, $per_page, $page, $contentType);
 
         return $this->client
@@ -4083,9 +4083,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -4123,7 +4123,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function developerCustomersAccountsCardsUnfreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['developerCustomersAccountsCardsUnfreeze'][0])
     {
@@ -4145,7 +4145,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function developerCustomersAccountsCardsUnfreezeWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['developerCustomersAccountsCardsUnfreeze'][0])
     {
@@ -4176,11 +4176,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4198,16 +4198,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4225,7 +4225,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4325,7 +4325,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4358,7 +4358,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4366,7 +4366,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4442,7 +4442,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function developerCustomersAccountsCardsUnfreezeAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['developerCustomersAccountsCardsUnfreeze'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->developerCustomersAccountsCardsUnfreezeRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $contentType);
 
         return $this->client
@@ -4633,9 +4633,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -4673,7 +4673,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardIssue($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request, string $contentType = self::contentTypes['managedCardIssue'][0])
     {
@@ -4695,7 +4695,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardIssueWithHttpInfo($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request, string $contentType = self::contentTypes['managedCardIssue'][0])
     {
@@ -4726,11 +4726,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4748,16 +4748,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4775,7 +4775,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4848,7 +4848,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4881,7 +4881,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4889,7 +4889,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4957,7 +4957,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardIssueAsyncWithHttpInfo($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request, string $contentType = self::contentTypes['managedCardIssue'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->managedCardIssueRequest($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request, $contentType);
 
         return $this->client
@@ -5147,9 +5147,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -5187,7 +5187,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardLifecycleFreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['managedCardLifecycleFreeze'][0])
     {
@@ -5209,7 +5209,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardLifecycleFreezeWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['managedCardLifecycleFreeze'][0])
     {
@@ -5240,11 +5240,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5262,16 +5262,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5289,7 +5289,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5389,7 +5389,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5422,7 +5422,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5430,7 +5430,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5506,7 +5506,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardLifecycleFreezeAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['managedCardLifecycleFreeze'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->managedCardLifecycleFreezeRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $contentType);
 
         return $this->client
@@ -5697,9 +5697,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -5738,7 +5738,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardLifecycleSetLimits($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request, string $contentType = self::contentTypes['managedCardLifecycleSetLimits'][0])
     {
@@ -5761,7 +5761,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardLifecycleSetLimitsWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request, string $contentType = self::contentTypes['managedCardLifecycleSetLimits'][0])
     {
@@ -5792,11 +5792,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5814,7 +5814,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5887,7 +5887,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5920,7 +5920,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5990,7 +5990,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardLifecycleSetLimitsAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request, string $contentType = self::contentTypes['managedCardLifecycleSetLimits'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->managedCardLifecycleSetLimitsRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request, $contentType);
 
         return $this->client
@@ -6196,9 +6196,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -6237,7 +6237,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardLifecycleSetPin($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request, string $contentType = self::contentTypes['managedCardLifecycleSetPin'][0])
     {
@@ -6260,7 +6260,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardLifecycleSetPinWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request, string $contentType = self::contentTypes['managedCardLifecycleSetPin'][0])
     {
@@ -6291,11 +6291,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6313,16 +6313,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6340,7 +6340,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -6413,7 +6413,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6446,7 +6446,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6454,7 +6454,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6524,7 +6524,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardLifecycleSetPinAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request, string $contentType = self::contentTypes['managedCardLifecycleSetPin'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->managedCardLifecycleSetPinRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request, $contentType);
 
         return $this->client
@@ -6730,9 +6730,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -6771,7 +6771,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardLifecycleTerminate($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request, string $contentType = self::contentTypes['managedCardLifecycleTerminate'][0])
     {
@@ -6794,7 +6794,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardLifecycleTerminateWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request, string $contentType = self::contentTypes['managedCardLifecycleTerminate'][0])
     {
@@ -6825,11 +6825,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6847,16 +6847,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6874,7 +6874,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -6974,7 +6974,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7007,7 +7007,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7015,7 +7015,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7093,7 +7093,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardLifecycleTerminateAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request, string $contentType = self::contentTypes['managedCardLifecycleTerminate'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->managedCardLifecycleTerminateRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request, $contentType);
 
         return $this->client
@@ -7299,9 +7299,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -7339,7 +7339,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardLifecycleUnfreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['managedCardLifecycleUnfreeze'][0])
     {
@@ -7361,7 +7361,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ValidationError|\MizanCore\BaasSdk\Generated\Model\ErrorResponse|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardLifecycleUnfreezeWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['managedCardLifecycleUnfreeze'][0])
     {
@@ -7392,11 +7392,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -7414,16 +7414,16 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -7441,7 +7441,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -7541,7 +7541,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7574,7 +7574,7 @@ class DeveloperPortalManagedCardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7582,7 +7582,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7658,7 +7658,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardLifecycleUnfreezeAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, string $contentType = self::contentTypes['managedCardLifecycleUnfreeze'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->managedCardLifecycleUnfreezeRequest($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $contentType);
 
         return $this->client
@@ -7849,9 +7849,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -7887,7 +7887,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardReadIndex($customer_id, $account_id, $x_tenant_id, string $contentType = self::contentTypes['managedCardReadIndex'][0])
     {
@@ -7907,7 +7907,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardReadIndexWithHttpInfo($customer_id, $account_id, $x_tenant_id, string $contentType = self::contentTypes['managedCardReadIndex'][0])
     {
@@ -7938,11 +7938,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -7960,7 +7960,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -8006,7 +8006,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8039,7 +8039,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8095,7 +8095,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardReadIndexAsyncWithHttpInfo($customer_id, $account_id, $x_tenant_id, string $contentType = self::contentTypes['managedCardReadIndex'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->managedCardReadIndexRequest($customer_id, $account_id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -8249,9 +8249,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -8288,7 +8288,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardReadShow($customer_id, $account_id, $card_id, $x_tenant_id, string $contentType = self::contentTypes['managedCardReadShow'][0])
     {
@@ -8309,7 +8309,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardReadShowWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, string $contentType = self::contentTypes['managedCardReadShow'][0])
     {
@@ -8340,11 +8340,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -8362,7 +8362,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -8408,7 +8408,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8441,7 +8441,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8499,7 +8499,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardReadShowAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, string $contentType = self::contentTypes['managedCardReadShow'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response';
         $request = $this->managedCardReadShowRequest($customer_id, $account_id, $card_id, $x_tenant_id, $contentType);
 
         return $this->client
@@ -8669,9 +8669,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -8710,7 +8710,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
      */
     public function managedCardReadTransactions($customer_id, $account_id, $card_id, $x_tenant_id, $per_page = null, $page = null, string $contentType = self::contentTypes['managedCardReadTransactions'][0])
     {
@@ -8733,7 +8733,7 @@ class DeveloperPortalManagedCardsApi
      *
      * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function managedCardReadTransactionsWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $per_page = null, $page = null, string $contentType = self::contentTypes['managedCardReadTransactions'][0])
     {
@@ -8764,11 +8764,11 @@ class DeveloperPortalManagedCardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' === '\SplFileObject') {
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response' !== 'string') {
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -8786,7 +8786,7 @@ class DeveloperPortalManagedCardsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response', []),
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -8832,7 +8832,7 @@ class DeveloperPortalManagedCardsApi
                 );
             }
 
-            $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8865,7 +8865,7 @@ class DeveloperPortalManagedCardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response',
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8927,7 +8927,7 @@ class DeveloperPortalManagedCardsApi
      */
     public function managedCardReadTransactionsAsyncWithHttpInfo($customer_id, $account_id, $card_id, $x_tenant_id, $per_page = null, $page = null, string $contentType = self::contentTypes['managedCardReadTransactions'][0])
     {
-        $returnType = '\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response';
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response';
         $request = $this->managedCardReadTransactionsRequest($customer_id, $account_id, $card_id, $x_tenant_id, $per_page, $page, $contentType);
 
         return $this->client
@@ -9119,9 +9119,9 @@ class DeveloperPortalManagedCardsApi
             $headers['X-Signature'] = $apiKey;
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('X-Partner-Key');
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
         if ($apiKey !== null) {
-            $headers['X-Partner-Key'] = $apiKey;
+            $headers['X-API-Key'] = $apiKey;
         }
 
         $defaultHeaders = [];

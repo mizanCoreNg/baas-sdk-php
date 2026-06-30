@@ -27,7 +27,7 @@ All URIs are relative to https://api.mizancore.ng, except if the operation defin
 ## `developerCustomersAccountsCardsFreeze()`
 
 ```php
-developerCustomersAccountsCardsFreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsFreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Freeze a managed card
@@ -52,9 +52,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -89,7 +89,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ try {
 ## `developerCustomersAccountsCardsIndex()`
 
 ```php
-developerCustomersAccountsCardsIndex($customer_id, $account_id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsIndex($customer_id, $account_id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 List managed cards for an account
@@ -132,9 +132,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -165,7 +165,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ try {
 ## `developerCustomersAccountsCardsIssue()`
 
 ```php
-developerCustomersAccountsCardsIssue($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsIssue($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Issue a managed virtual card
@@ -208,9 +208,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -245,7 +245,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ try {
 ## `developerCustomersAccountsCardsLimits()`
 
 ```php
-developerCustomersAccountsCardsLimits($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsLimits($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Set managed card spending limits
@@ -288,9 +288,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -327,7 +327,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ try {
 ## `developerCustomersAccountsCardsPin()`
 
 ```php
-developerCustomersAccountsCardsPin($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsPin($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Set or change a managed card PIN
@@ -370,9 +370,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -409,7 +409,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ try {
 ## `developerCustomersAccountsCardsShow()`
 
 ```php
-developerCustomersAccountsCardsShow($customer_id, $account_id, $card_id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsShow($customer_id, $account_id, $card_id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Show a managed card
@@ -452,9 +452,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -487,7 +487,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ try {
 ## `developerCustomersAccountsCardsTerminate()`
 
 ```php
-developerCustomersAccountsCardsTerminate($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsTerminate($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Terminate a managed card
@@ -530,9 +530,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -569,7 +569,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -587,7 +587,7 @@ try {
 ## `developerCustomersAccountsCardsTransactions()`
 
 ```php
-developerCustomersAccountsCardsTransactions($customer_id, $account_id, $card_id, $x_tenant_id, $per_page, $page): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsTransactions($customer_id, $account_id, $card_id, $x_tenant_id, $per_page, $page): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response
 ```
 
 List managed card transactions
@@ -612,9 +612,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -651,7 +651,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response**](../Model/ManagedCardReadTransactions200Response.md)
 
 ### Authorization
 
@@ -669,7 +669,7 @@ try {
 ## `developerCustomersAccountsCardsUnfreeze()`
 
 ```php
-developerCustomersAccountsCardsUnfreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersAccountsCardsUnfreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Unfreeze a managed card
@@ -694,9 +694,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -731,7 +731,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -749,7 +749,7 @@ try {
 ## `managedCardIssue()`
 
 ```php
-managedCardIssue($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardIssue($customer_id, $account_id, $x_tenant_id, $idempotency_key, $issue_managed_card_request): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Issue a managed virtual card
@@ -774,9 +774,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -811,7 +811,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -829,7 +829,7 @@ try {
 ## `managedCardLifecycleFreeze()`
 
 ```php
-managedCardLifecycleFreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardLifecycleFreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Freeze a managed card
@@ -854,9 +854,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -891,7 +891,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -909,7 +909,7 @@ try {
 ## `managedCardLifecycleSetLimits()`
 
 ```php
-managedCardLifecycleSetLimits($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardLifecycleSetLimits($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_limits_request): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Set managed card spending limits
@@ -934,9 +934,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -973,7 +973,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -991,7 +991,7 @@ try {
 ## `managedCardLifecycleSetPin()`
 
 ```php
-managedCardLifecycleSetPin($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardLifecycleSetPin($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $set_managed_card_pin_request): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Set or change a managed card PIN
@@ -1016,9 +1016,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -1055,7 +1055,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1073,7 +1073,7 @@ try {
 ## `managedCardLifecycleTerminate()`
 
 ```php
-managedCardLifecycleTerminate($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardLifecycleTerminate($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key, $terminate_managed_card_request): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Terminate a managed card
@@ -1098,9 +1098,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -1137,7 +1137,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1155,7 +1155,7 @@ try {
 ## `managedCardLifecycleUnfreeze()`
 
 ```php
-managedCardLifecycleUnfreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardLifecycleUnfreeze($customer_id, $account_id, $card_id, $x_tenant_id, $idempotency_key): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Unfreeze a managed card
@@ -1180,9 +1180,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -1217,7 +1217,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1235,7 +1235,7 @@ try {
 ## `managedCardReadIndex()`
 
 ```php
-managedCardReadIndex($customer_id, $account_id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardReadIndex($customer_id, $account_id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 List managed cards for an account
@@ -1260,9 +1260,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -1293,7 +1293,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1311,7 +1311,7 @@ try {
 ## `managedCardReadShow()`
 
 ```php
-managedCardReadShow($customer_id, $account_id, $card_id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardReadShow($customer_id, $account_id, $card_id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response
 ```
 
 Show a managed card
@@ -1336,9 +1336,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -1371,7 +1371,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadIndex200Response**](../Model/ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1389,7 +1389,7 @@ try {
 ## `managedCardReadTransactions()`
 
 ```php
-managedCardReadTransactions($customer_id, $account_id, $card_id, $x_tenant_id, $per_page, $page): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCardReadTransactions($customer_id, $account_id, $card_id, $x_tenant_id, $per_page, $page): \MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response
 ```
 
 List managed card transactions
@@ -1414,9 +1414,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCardsApi(
@@ -1453,7 +1453,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCardReadTransactions200Response**](../Model/ManagedCardReadTransactions200Response.md)
 
 ### Authorization
 

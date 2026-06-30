@@ -60,7 +60,8 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
         'amount' => 'int',
         'destination_account' => 'string',
         'destination_bank' => 'string',
-        'narration' => 'string'
+        'narration' => 'string',
+        'source_account' => 'string'
     ];
 
     /**
@@ -74,7 +75,8 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
         'amount' => null,
         'destination_account' => null,
         'destination_bank' => null,
-        'narration' => null
+        'narration' => null,
+        'source_account' => null
     ];
 
     /**
@@ -86,7 +88,8 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
         'amount' => false,
         'destination_account' => false,
         'destination_bank' => false,
-        'narration' => true
+        'narration' => true,
+        'source_account' => true
     ];
 
     /**
@@ -178,7 +181,8 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
         'amount' => 'amount',
         'destination_account' => 'destination_account',
         'destination_bank' => 'destination_bank',
-        'narration' => 'narration'
+        'narration' => 'narration',
+        'source_account' => 'source_account'
     ];
 
     /**
@@ -190,7 +194,8 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
         'amount' => 'setAmount',
         'destination_account' => 'setDestinationAccount',
         'destination_bank' => 'setDestinationBank',
-        'narration' => 'setNarration'
+        'narration' => 'setNarration',
+        'source_account' => 'setSourceAccount'
     ];
 
     /**
@@ -202,7 +207,8 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
         'amount' => 'getAmount',
         'destination_account' => 'getDestinationAccount',
         'destination_bank' => 'getDestinationBank',
-        'narration' => 'getNarration'
+        'narration' => 'getNarration',
+        'source_account' => 'getSourceAccount'
     ];
 
     /**
@@ -266,6 +272,7 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('destination_account', $data ?? [], null);
         $this->setIfExists('destination_bank', $data ?? [], null);
         $this->setIfExists('narration', $data ?? [], null);
+        $this->setIfExists('source_account', $data ?? [], null);
     }
 
     /**
@@ -334,6 +341,18 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
 
         if (!is_null($this->container['narration']) && (mb_strlen($this->container['narration']) > 100)) {
             $invalidProperties[] = "invalid value for 'narration', the character length must be smaller than or equal to 100.";
+        }
+
+        if (!is_null($this->container['source_account']) && (mb_strlen($this->container['source_account']) > 10)) {
+            $invalidProperties[] = "invalid value for 'source_account', the character length must be smaller than or equal to 10.";
+        }
+
+        if (!is_null($this->container['source_account']) && (mb_strlen($this->container['source_account']) < 10)) {
+            $invalidProperties[] = "invalid value for 'source_account', the character length must be bigger than or equal to 10.";
+        }
+
+        if (!is_null($this->container['source_account']) && !preg_match("/^\\d{10}$/", $this->container['source_account'])) {
+            $invalidProperties[] = "invalid value for 'source_account', must be conform to the pattern /^\\d{10}$/.";
         }
 
         return $invalidProperties;
@@ -491,6 +510,50 @@ class InitiateWithdrawalRequest implements ModelInterface, ArrayAccess, \JsonSer
         }
 
         $this->container['narration'] = $narration;
+
+        return $this;
+    }
+
+    /**
+     * Gets source_account
+     *
+     * @return string|null
+     */
+    public function getSourceAccount()
+    {
+        return $this->container['source_account'];
+    }
+
+    /**
+     * Sets source_account
+     *
+     * @param string|null $source_account source_account
+     *
+     * @return self
+     */
+    public function setSourceAccount($source_account)
+    {
+        if (is_null($source_account)) {
+            array_push($this->openAPINullablesSetToNull, 'source_account');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('source_account', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        if (!is_null($source_account) && (mb_strlen($source_account) > 10)) {
+            throw new \InvalidArgumentException('invalid length for $source_account when calling InitiateWithdrawalRequest., must be smaller than or equal to 10.');
+        }
+        if (!is_null($source_account) && (mb_strlen($source_account) < 10)) {
+            throw new \InvalidArgumentException('invalid length for $source_account when calling InitiateWithdrawalRequest., must be bigger than or equal to 10.');
+        }
+        if (!is_null($source_account) && (!preg_match("/^\\d{10}$/", ObjectSerializer::toString($source_account)))) {
+            throw new \InvalidArgumentException("invalid value for \$source_account when calling InitiateWithdrawalRequest., must conform to the pattern /^\\d{10}$/.");
+        }
+
+        $this->container['source_account'] = $source_account;
 
         return $this;
     }

@@ -21,7 +21,7 @@ All URIs are relative to https://api.mizancore.ng, except if the operation defin
 ## `developerCustomersIndex()`
 
 ```php
-developerCustomersIndex($x_tenant_id, $per_page): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersIndex($x_tenant_id, $per_page): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 List managed customers
@@ -46,9 +46,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -77,7 +77,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ try {
 ## `developerCustomersOffboard()`
 
 ```php
-developerCustomersOffboard($customer_id, $x_tenant_id, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersOffboard($customer_id, $x_tenant_id, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Offboard a managed customer
@@ -120,9 +120,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -153,7 +153,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ try {
 ## `developerCustomersReactivate()`
 
 ```php
-developerCustomersReactivate($customer_id, $x_tenant_id, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersReactivate($customer_id, $x_tenant_id, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Reactivate a managed customer
@@ -196,9 +196,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -229,7 +229,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ try {
 ## `developerCustomersShow()`
 
 ```php
-developerCustomersShow($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersShow($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Show a managed customer
@@ -272,9 +272,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -303,7 +303,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ try {
 ## `developerCustomersStore()`
 
 ```php
-developerCustomersStore($x_tenant_id, $onboard_managed_customer_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersStore($x_tenant_id, $onboard_managed_customer_request): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Onboard a managed customer
@@ -346,9 +346,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -377,7 +377,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ try {
 ## `developerCustomersSuspend()`
 
 ```php
-developerCustomersSuspend($customer_id, $x_tenant_id, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+developerCustomersSuspend($customer_id, $x_tenant_id, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Suspend a managed customer
@@ -420,9 +420,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -453,7 +453,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ try {
 ## `managedCustomerIndex()`
 
 ```php
-managedCustomerIndex($x_tenant_id, $per_page): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCustomerIndex($x_tenant_id, $per_page): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 List managed customers
@@ -496,9 +496,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -527,7 +527,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -545,7 +545,7 @@ try {
 ## `managedCustomerLifecycleOffboard()`
 
 ```php
-managedCustomerLifecycleOffboard($customer_id, $x_tenant_id, $idempotency_key, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCustomerLifecycleOffboard($customer_id, $x_tenant_id, $idempotency_key, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Offboard a managed customer
@@ -570,9 +570,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -605,7 +605,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -623,7 +623,7 @@ try {
 ## `managedCustomerLifecycleReactivate()`
 
 ```php
-managedCustomerLifecycleReactivate($customer_id, $x_tenant_id, $idempotency_key, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCustomerLifecycleReactivate($customer_id, $x_tenant_id, $idempotency_key, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Reactivate a managed customer
@@ -648,9 +648,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -683,7 +683,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -701,7 +701,7 @@ try {
 ## `managedCustomerLifecycleSuspend()`
 
 ```php
-managedCustomerLifecycleSuspend($customer_id, $x_tenant_id, $idempotency_key, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCustomerLifecycleSuspend($customer_id, $x_tenant_id, $idempotency_key, $managed_customer_lifecycle_request): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Suspend a managed customer
@@ -726,9 +726,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -761,7 +761,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -779,7 +779,7 @@ try {
 ## `managedCustomerShow()`
 
 ```php
-managedCustomerShow($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCustomerShow($id, $x_tenant_id): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Show a managed customer
@@ -804,9 +804,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -835,7 +835,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -853,7 +853,7 @@ try {
 ## `managedCustomerStore()`
 
 ```php
-managedCustomerStore($x_tenant_id, $idempotency_key, $onboard_managed_customer_request): \MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response
+managedCustomerStore($x_tenant_id, $idempotency_key, $onboard_managed_customer_request): \MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response
 ```
 
 Onboard a managed customer
@@ -878,9 +878,9 @@ $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->
 // $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Signature', 'Bearer');
 
 // Configure API key authorization: apiKeyAuth
-$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-Partner-Key', 'YOUR_API_KEY');
+$config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Partner-Key', 'Bearer');
+// $config = MizanCore\BaasSdk\Generated\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 
 
 $apiInstance = new MizanCore\BaasSdk\Generated\Api\DeveloperPortalManagedCustomersApi(
@@ -911,7 +911,7 @@ try {
 
 ### Return type
 
-[**\MizanCore\BaasSdk\Generated\Model\VirtualAccountQueryIndex200Response**](../Model/VirtualAccountQueryIndex200Response.md)
+[**\MizanCore\BaasSdk\Generated\Model\ManagedCustomerIndex200Response**](../Model/ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
