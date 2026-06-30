@@ -1,0 +1,40 @@
+{
+    "name": "mizancore/baas-sdk",
+    "description": "Official MizanCore Banking-as-a-Service (BaaS) PHP SDK — OpenAPI-generated client with a hand-written value-add layer (auto idempotency keys, retry/backoff, typed errors, webhook signature verification).",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "mizancore",
+        "baas",
+        "banking",
+        "sdk",
+        "fintech",
+        "nigeria"
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.5",
+        "guzzlehttp/psr7": "^2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5 || ^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MizanCore\\BaasSdk\\": "src/",
+            "MizanCore\\BaasSdk\\Generated\\": "generated/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MizanCore\\BaasSdk\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
