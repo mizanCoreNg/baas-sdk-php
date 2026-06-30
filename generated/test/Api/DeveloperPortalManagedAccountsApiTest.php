@@ -84,6 +84,18 @@ class DeveloperPortalManagedAccountsApiTest extends TestCase
     }
 
     /**
+     * Test case for developerAccountsShow
+     *
+     * Get a managed account.
+     *
+     */
+    public function testDeveloperAccountsShow()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for developerCustomersAccountsIndex
      *
      * List a customer's managed accounts.
@@ -114,6 +126,18 @@ class DeveloperPortalManagedAccountsApiTest extends TestCase
      *
      */
     public function testManagedAccountIndex()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for managedAccountShow
+     *
+     * Get a managed account.
+     *
+     */
+    public function testManagedAccountShow()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

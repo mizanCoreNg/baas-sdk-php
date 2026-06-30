@@ -74,6 +74,9 @@ class DeveloperPortalManagedAccountsApi
         'developerAccountsIndex' => [
             'application/json',
         ],
+        'developerAccountsShow' => [
+            'application/json',
+        ],
         'developerCustomersAccountsIndex' => [
             'application/json',
         ],
@@ -81,6 +84,9 @@ class DeveloperPortalManagedAccountsApi
             'application/json',
         ],
         'managedAccountIndex' => [
+            'application/json',
+        ],
+        'managedAccountShow' => [
             'application/json',
         ],
         'managedAccountStore' => [
@@ -424,6 +430,386 @@ class DeveloperPortalManagedAccountsApi
             $headerParams['X-Tenant-ID'] = ObjectSerializer::toHeaderValue($x_tenant_id);
         }
 
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-Tenant-ID');
+        if ($apiKey !== null) {
+            $headers['X-Tenant-ID'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-Signature');
+        if ($apiKey !== null) {
+            $headers['X-Signature'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation developerAccountsShow
+     *
+     * Get a managed account
+     *
+     * @param  string $account_id account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['developerAccountsShow'] to see the possible values for this operation
+     *
+     * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     */
+    public function developerAccountsShow($account_id, $x_tenant_id, string $contentType = self::contentTypes['developerAccountsShow'][0])
+    {
+        list($response) = $this->developerAccountsShowWithHttpInfo($account_id, $x_tenant_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation developerAccountsShowWithHttpInfo
+     *
+     * Get a managed account
+     *
+     * @param  string $account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['developerAccountsShow'] to see the possible values for this operation
+     *
+     * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function developerAccountsShowWithHttpInfo($account_id, $x_tenant_id, string $contentType = self::contentTypes['developerAccountsShow'][0])
+    {
+        $request = $this->developerAccountsShowRequest($account_id, $x_tenant_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\MizanCore\BaasSdk\Generated\Model\ErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\MizanCore\BaasSdk\Generated\Model\ErrorResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MizanCore\BaasSdk\Generated\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation developerAccountsShowAsync
+     *
+     * Get a managed account
+     *
+     * @param  string $account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['developerAccountsShow'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function developerAccountsShowAsync($account_id, $x_tenant_id, string $contentType = self::contentTypes['developerAccountsShow'][0])
+    {
+        return $this->developerAccountsShowAsyncWithHttpInfo($account_id, $x_tenant_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation developerAccountsShowAsyncWithHttpInfo
+     *
+     * Get a managed account
+     *
+     * @param  string $account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['developerAccountsShow'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function developerAccountsShowAsyncWithHttpInfo($account_id, $x_tenant_id, string $contentType = self::contentTypes['developerAccountsShow'][0])
+    {
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response';
+        $request = $this->developerAccountsShowRequest($account_id, $x_tenant_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'developerAccountsShow'
+     *
+     * @param  string $account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['developerAccountsShow'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function developerAccountsShowRequest($account_id, $x_tenant_id, string $contentType = self::contentTypes['developerAccountsShow'][0])
+    {
+
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $account_id when calling developerAccountsShow'
+            );
+        }
+
+        // verify the required parameter 'x_tenant_id' is set
+        if ($x_tenant_id === null || (is_array($x_tenant_id) && count($x_tenant_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $x_tenant_id when calling developerAccountsShow'
+            );
+        }
+        if (strlen($x_tenant_id) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$x_tenant_id" when calling DeveloperPortalManagedAccountsApi.developerAccountsShow, must be bigger than or equal to 1.');
+        }
+        if (!preg_match("/^[A-Za-z0-9._-]+$/", $x_tenant_id)) {
+            throw new \InvalidArgumentException("invalid value for \"x_tenant_id\" when calling DeveloperPortalManagedAccountsApi.developerAccountsShow, must conform to the pattern /^[A-Za-z0-9._-]+$/.");
+        }
+        
+
+        $resourcePath = '/api/v1/developer/accounts/{accountId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // header params
+        if ($x_tenant_id !== null) {
+            $headerParams['X-Tenant-ID'] = ObjectSerializer::toHeaderValue($x_tenant_id);
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'accountId' . '}',
+                ObjectSerializer::toPathValue($account_id),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(
@@ -1615,6 +2001,386 @@ class DeveloperPortalManagedAccountsApi
             $resourcePath = str_replace(
                 '{' . 'customerId' . '}',
                 ObjectSerializer::toPathValue($customer_id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-Tenant-ID');
+        if ($apiKey !== null) {
+            $headers['X-Tenant-ID'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-Signature');
+        if ($apiKey !== null) {
+            $headers['X-Signature'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation managedAccountShow
+     *
+     * Get a managed account
+     *
+     * @param  string $account_id account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['managedAccountShow'] to see the possible values for this operation
+     *
+     * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse
+     */
+    public function managedAccountShow($account_id, $x_tenant_id, string $contentType = self::contentTypes['managedAccountShow'][0])
+    {
+        list($response) = $this->managedAccountShowWithHttpInfo($account_id, $x_tenant_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation managedAccountShowWithHttpInfo
+     *
+     * Get a managed account
+     *
+     * @param  string $account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['managedAccountShow'] to see the possible values for this operation
+     *
+     * @throws \MizanCore\BaasSdk\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response|\MizanCore\BaasSdk\Generated\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function managedAccountShowWithHttpInfo($account_id, $x_tenant_id, string $contentType = self::contentTypes['managedAccountShow'][0])
+    {
+        $request = $this->managedAccountShowRequest($account_id, $x_tenant_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\MizanCore\BaasSdk\Generated\Model\ErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\MizanCore\BaasSdk\Generated\Model\ErrorResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MizanCore\BaasSdk\Generated\Model\ErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MizanCore\BaasSdk\Generated\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation managedAccountShowAsync
+     *
+     * Get a managed account
+     *
+     * @param  string $account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['managedAccountShow'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function managedAccountShowAsync($account_id, $x_tenant_id, string $contentType = self::contentTypes['managedAccountShow'][0])
+    {
+        return $this->managedAccountShowAsyncWithHttpInfo($account_id, $x_tenant_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation managedAccountShowAsyncWithHttpInfo
+     *
+     * Get a managed account
+     *
+     * @param  string $account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['managedAccountShow'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function managedAccountShowAsyncWithHttpInfo($account_id, $x_tenant_id, string $contentType = self::contentTypes['managedAccountShow'][0])
+    {
+        $returnType = '\MizanCore\BaasSdk\Generated\Model\ManagedAccountIndex200Response';
+        $request = $this->managedAccountShowRequest($account_id, $x_tenant_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'managedAccountShow'
+     *
+     * @param  string $account_id (required)
+     * @param  string $x_tenant_id Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['managedAccountShow'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function managedAccountShowRequest($account_id, $x_tenant_id, string $contentType = self::contentTypes['managedAccountShow'][0])
+    {
+
+        // verify the required parameter 'account_id' is set
+        if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $account_id when calling managedAccountShow'
+            );
+        }
+
+        // verify the required parameter 'x_tenant_id' is set
+        if ($x_tenant_id === null || (is_array($x_tenant_id) && count($x_tenant_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $x_tenant_id when calling managedAccountShow'
+            );
+        }
+        if (strlen($x_tenant_id) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$x_tenant_id" when calling DeveloperPortalManagedAccountsApi.managedAccountShow, must be bigger than or equal to 1.');
+        }
+        if (!preg_match("/^[A-Za-z0-9._-]+$/", $x_tenant_id)) {
+            throw new \InvalidArgumentException("invalid value for \"x_tenant_id\" when calling DeveloperPortalManagedAccountsApi.managedAccountShow, must conform to the pattern /^[A-Za-z0-9._-]+$/.");
+        }
+        
+
+        $resourcePath = '/api/v1/baas/accounts/{accountId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // header params
+        if ($x_tenant_id !== null) {
+            $headerParams['X-Tenant-ID'] = ObjectSerializer::toHeaderValue($x_tenant_id);
+        }
+
+        // path params
+        if ($account_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'accountId' . '}',
+                ObjectSerializer::toPathValue($account_id),
                 $resourcePath
             );
         }
